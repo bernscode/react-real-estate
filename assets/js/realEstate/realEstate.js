@@ -1,5 +1,6 @@
 import React, { Component} from 'react'
 import ReactDOM from 'react-dom'
+import Header from './Header.js'
 
 class App extends Component {
   constructor () {
@@ -8,11 +9,10 @@ class App extends Component {
       name: 'bern'
     }
   }
-  clickedBtn = () => {
-    console.log('bernscode test')
-  }
   render () {
-    return (<div>bernscode</div>)
+    return (<div>
+      <Header /> 
+      </div>)
   }
 }
 
