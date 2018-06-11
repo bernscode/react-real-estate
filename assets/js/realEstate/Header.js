@@ -10,12 +10,12 @@ export default class Header extends Component {
   }
   render () {
     return (<header>
-      <div>Logo</div>
+      <div className="logo"><span>bern</span>Estates</div>
 
       <nav>
-        <a href="#">create ads</a>
-        <a href="#">about us</a>
-        <a href="#">log in</a>
+        <a href="#">Create Ads</a>
+      <a href="#">About Us</a>
+    <a href="#">Log In</a>
         <a href="#" className="register-btn">Register</a>
       </nav>
 

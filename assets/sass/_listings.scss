@@ -1,11 +1,36 @@
 header {
-  background: black;
+  background: $darkBlue;
   color: white;
+  overflow: auto;
+  padding: 25px 85px;
+
+  .logo {
+    font-size: 18px;
+    float: left;
+    span {
+      font-weight: 100;
+    }
+  }
+
   nav {
+    float: right;
     a {
+      font-size: 14px;
+      font-weight: 300;
       color: white;
+      text-decoration: none;
+      padding: 10px 28px;
+      text-transform: capitalize;
+
       &:hover {
-        color: $khaki;
+        color: $gold;
+      }
+      &.register-btn {
+        background: $lightBrown;
+        padding: 7px 27px;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
       }
     }
   }

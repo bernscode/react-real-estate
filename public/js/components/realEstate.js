@@ -50,8 +50,13 @@ var Header = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          null,
-          'Logo'
+          { className: 'logo' },
+          _react2.default.createElement(
+            'span',
+            null,
+            'bern'
+          ),
+          'Estates'
         ),
         _react2.default.createElement(
           'nav',
@@ -59,17 +64,17 @@ var Header = function (_Component) {
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'create ads'
+            'Create Ads'
           ),
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'about us'
+            'About Us'
           ),
           _react2.default.createElement(
             'a',
             { href: '#' },
-            'log in'
+            'Log In'
           ),
           _react2.default.createElement(
             'a',
