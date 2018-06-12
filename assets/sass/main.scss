@@ -3,11 +3,15 @@
 @import "reset";
 
 
-body {
+*,
+body,
+html {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
   letter-spacing: 1px;
   // background: purple;
 }
 
 
 @import "listings";
+@import "content-area";

@@ -2,13 +2,15 @@ header {
   background: $darkBlue;
   color: white;
   overflow: auto;
-  padding: 25px 85px;
+  padding: 25px 45px;
+  color: $gold;
 
   .logo {
     font-size: 18px;
     float: left;
     span {
       font-weight: 100;
+      color: white;
     }
   }
 

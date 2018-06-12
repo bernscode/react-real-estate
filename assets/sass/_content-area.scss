@@ -1,0 +1,63 @@
+#filter {
+  background: $lightBlue;
+  color: white;
+  width: 30%;
+  max-width: 300px;
+
+  .inside {
+    padding: 30px 25px 30px 45px;
+    // padding: 20px;
+    max-width: 300px;
+  }
+
+  h4 {
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  select {
+    height: 25px;
+    background: trasparent;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #1B1B1B;
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .filters {
+    .title {
+      font-size: 13.5px;
+      display: block;
+      margin-bottom: 16px;
+      color: darkGrey;
+    }
+
+    input[type="text"] {
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 5px;
+      width: 45%;
+      display: inline-block;
+      margin-right: 2.5%;
+      margin-bottom: 16px;
+    }
+
+    //target .filters that have .features
+    &.features {
+      label {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+
+        input[type="checkbox"] {
+          float: right;
+        }
+      }
+    }
+  }
+}

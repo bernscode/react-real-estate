@@ -119,8 +119,194 @@ var Filter = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'filter' },
-        'Filter'
+        { id: 'filter' },
+        _react2.default.createElement(
+          'div',
+          { className: 'inside' },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'Filter'
+          ),
+          _react2.default.createElement(
+            'select',
+            { name: 'neighborhood', className: 'filters neighborhood' },
+            _react2.default.createElement(
+              'option',
+              null,
+              'Los Angeles County'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Orange County'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Ventura County'
+            )
+          ),
+          _react2.default.createElement(
+            'select',
+            { name: 'house-type', className: 'filters house-type' },
+            _react2.default.createElement(
+              'option',
+              null,
+              'Houses'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Condos'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Townhomes'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Manufacured'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              'Lots / Land'
+            )
+          ),
+          _react2.default.createElement(
+            'select',
+            { name: 'bedroom', className: 'filters bedroom' },
+            _react2.default.createElement(
+              'option',
+              null,
+              '1 Bedroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '2 Bedroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '3 Bedroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '4+ Bedroom'
+            )
+          ),
+          _react2.default.createElement(
+            'select',
+            { name: 'bathroom', className: 'filters bathroom' },
+            _react2.default.createElement(
+              'option',
+              null,
+              '1 Bathroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '2 Bathroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '3 Bathroom'
+            ),
+            _react2.default.createElement(
+              'option',
+              null,
+              '4+ Bathroom'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'filters price' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Price'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'filters square-feet' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Square Feet'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'min-square-feet', className: 'min-square-feet' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-square-feet', className: 'max-square-feet' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'filters lot-size' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Lot Size'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'min-lot-size', className: 'min-lot-size' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-lot-size', className: 'max-lot-size' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'filters features' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Features'
+            ),
+            _react2.default.createElement(
+              'label',
+              { 'for': 'features' },
+              _react2.default.createElement(
+                'span',
+                null,
+                'Garage'
+              ),
+              _react2.default.createElement('input', { name: 'features', value: 'Garage', type: 'checkbox' })
+            ),
+            _react2.default.createElement(
+              'label',
+              { 'for': 'features' },
+              _react2.default.createElement(
+                'span',
+                null,
+                'Swimming Pool'
+              ),
+              _react2.default.createElement('input', { name: 'features', value: 'Swimming Pool', type: 'checkbox' })
+            ),
+            _react2.default.createElement(
+              'label',
+              { 'for': 'features' },
+              _react2.default.createElement(
+                'span',
+                null,
+                'Fireplace'
+              ),
+              _react2.default.createElement('input', { name: 'features', value: 'Fireplace', type: 'checkbox' })
+            ),
+            _react2.default.createElement(
+              'label',
+              { 'for': 'features' },
+              _react2.default.createElement(
+                'span',
+                null,
+                'Guest House'
+              ),
+              _react2.default.createElement('input', { name: 'features', value: 'Guest House', type: 'checkbox' })
+            )
+          )
+        )
       );
     }
   }]);
@@ -245,13 +431,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Header = function (_Component) {
-  _inherits(Header, _Component);
+var Listings = function (_Component) {
+  _inherits(Listings, _Component);
 
-  function Header() {
-    _classCallCheck(this, Header);
+  function Listings() {
+    _classCallCheck(this, Listings);
 
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+    var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
 
     _this.state = {
       name: 'bern'
@@ -259,7 +445,7 @@ var Header = function (_Component) {
     return _this;
   }
 
-  _createClass(Header, [{
+  _createClass(Listings, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -270,10 +456,10 @@ var Header = function (_Component) {
     }
   }]);
 
-  return Header;
+  return Listings;
 }(_react.Component);
 
-exports.default = Header;
+exports.default = Listings;
 
 /***/ })
 
