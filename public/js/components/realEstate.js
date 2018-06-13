@@ -528,15 +528,85 @@ var Listings = function (_Component) {
                     'div',
                     { className: 'square-feet' },
                     _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
-                    '1000 ft\xB2'
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000 ft\xB2'
+                    )
                   ),
-                  _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' })
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '3 Bedrooms'
+                    )
+                  )
                 )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                null,
+                '$1000 / month'
+              ),
+              _react2.default.createElement(
+                'span',
+                null,
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                'Hollywood, CA'
               )
             )
           )
         ),
-        _react2.default.createElement('section', { className: 'pagination' })
+        _react2.default.createElement(
+          'section',
+          { className: 'pagination' },
+          _react2.default.createElement(
+            'ul',
+            { className: 'pagination-nums' },
+            _react2.default.createElement(
+              'li',
+              null,
+              'Prev'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '1'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '2'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '3'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '4'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '5'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              'Next'
+            )
+          )
+        )
       );
     }
   }]);
