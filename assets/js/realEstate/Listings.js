@@ -11,7 +11,7 @@ export default class Listings extends Component {
   render () {
     return (<section id="listings">
       <section className="search-area">
-        <input type="text" name="search" value="Search Cities" />
+        <input type="text" name="search" />
       </section>
 
       <section className="sort-by-area">
@@ -46,7 +46,7 @@ export default class Listings extends Component {
               <div className="listing-details">
                 <div className="square-feet">
                   <i className="fa fa-square-o" aria-hidden="true"></i>
-                  <span>1000 ft&sup2;</span>
+                <span>2523 ft&sup2;</span>
                 </div>
                 <div className="bedrooms">
                   <i className="fa fa-bed" aria-hidden="true"></i>

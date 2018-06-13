@@ -454,7 +454,7 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'search-area' },
-          _react2.default.createElement('input', { type: 'text', name: 'search', value: 'Search Cities' })
+          _react2.default.createElement('input', { type: 'text', name: 'search' })
         ),
         _react2.default.createElement(
           'section',
@@ -531,7 +531,7 @@ var Listings = function (_Component) {
                     _react2.default.createElement(
                       'span',
                       null,
-                      '1000 ft\xB2'
+                      '2523 ft\xB2'
                     )
                   ),
                   _react2.default.createElement(
