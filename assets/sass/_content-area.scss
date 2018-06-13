@@ -11,7 +11,7 @@
   color: white;
   width: 30%;
   max-width: 300px;
-  min-width: 250px;
+  // min-width: 250px;
   display: inline-block;
   float: left;
 
@@ -82,8 +82,8 @@
 
 
 #listings {
-  width: 70%;
-  float: left;
+  width: 79%;
+  float: right;
   display: inline-block;
   padding: 30px;
   background: $offWhite;
@@ -159,6 +159,7 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+
       min-height: 200px;
       width: 100%;
       height: 100%;
@@ -172,16 +173,63 @@
 
 
       .details {
+        font-weight: 100;
+        padding: 30px;
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
+
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d242e+0,1d3e4c+33,b86d32+63,f59e48+100 */
         background: rgba(13,36,46,.8); /* Old browsers */
         background: -moz-linear-gradient(-45deg, rgba(13,36,46,.8) 0%, rgba(29,62,76,.8) 33%, rgba(184,109,50,.8) 63%, rgba(245,158,72,.8) 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(-45deg, rgba(13,36,46,.8) 0%,rgba(29,62,76,.8) 33%,rgba(184,109,50,.8) 63%,rgba(245,158,72,.8) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg, rgba(13,36,46,.8) 0%,rgba(29,62,76,.8) 33%,rgba(184,109,50,.8) 63%,rgba(245,158,72,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+        .user-img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 1px solid white;
+          display: inline-block;
+
+          background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/737555/profile/profile-512.jpg?100000") no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+
+        .user-details {
+          vertical-align: top;
+          display: inline-block;
+          width: 70%;
+          margin-left: 20px;
+
+          .user-name {
+            font-size: 15px;
+            font-weight: 300;
+            display: block;
+            color: rgba(255,255,255, 1);
+            margin-top: 8px;
+            margin-bottom: 5px;
+          }
+
+          .post-date {
+            font-size: 15px;
+            display: block;
+            color: rgba(255,255,255, .7)
+          }
+        }
       }
     }
 

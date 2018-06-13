@@ -513,11 +513,11 @@ var Listings = function (_Component) {
                   _react2.default.createElement(
                     'span',
                     { className: 'user-name' },
-                    'Claudia Medrano'
+                    'Hector A. Bernal'
                   ),
                   _react2.default.createElement(
                     'span',
-                    { className: 'user-name' },
+                    { className: 'post-date' },
                     '06/12/2018'
                   )
                 ),
