@@ -1,3 +1,11 @@
+#content-area {
+  overflow: auto;
+  width: 100%;
+  background: black;
+  min-height: 100%;
+}
+
+
 #filter {
   background: $lightBlue;
   color: white;
@@ -78,7 +86,7 @@
   float: left;
   display: inline-block;
   padding: 30px;
-  background: $realLightGrey;
+  background: $offWhite;
 
   .search-area {
     input[type="text"] {
@@ -93,9 +101,9 @@
     }
   }
   .sort-by-area {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     .results {
-      color: $darkBrown;
+      color: $darkGrey;
       font-size: 12px;
       display: inline-block;
       float: left;
@@ -125,6 +133,58 @@
         }
       }
     }
+  }
+
+
+
+  .listings-results {
+    margin-bottom: 60px;
+
+    .listing {
+      background: white;
+      width: 33.33%;
+      border-radius: 5px;
+
+      -webkit-box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+      -moz-box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+      box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+    }
+
+    .listing-img {
+      color: white;
+      padding: 15px;
+      position: relative;
+      background: url("https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&h=350") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      width: 100%;
+      height: 100%;
+
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+
+      .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d242e+0,1d3e4c+33,b86d32+63,f59e48+100 */
+        background: rgba(13,36,46,.8); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(13,36,46,.8) 0%, rgba(29,62,76,.8) 33%, rgba(184,109,50,.8) 63%, rgba(245,158,72,.8) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(13,36,46,.8) 0%,rgba(29,62,76,.8) 33%,rgba(184,109,50,.8) 63%,rgba(245,158,72,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(13,36,46,.8) 0%,rgba(29,62,76,.8) 33%,rgba(184,109,50,.8) 63%,rgba(245,158,72,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+
   }
 
 }

@@ -59,7 +59,7 @@ var App = function (_Component) {
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'section',
-          { id: 'contetn-area' },
+          { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, null),
           _react2.default.createElement(_Listings2.default, null)
         )

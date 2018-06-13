@@ -14,7 +14,7 @@ class App extends Component {
   render () {
     return (<div>
       <Header />
-        <section id="contetn-area">
+    <section id="content-area">
         <Filter />
         <Listings />
       </section>
