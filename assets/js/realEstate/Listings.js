@@ -9,23 +9,23 @@ export default class Listings extends Component {
     }
   }
   render () {
-    return (<section className="listings">
+    return (<section id="listings">
       <section className="search-area">
-        <input type="text" name="search" />
+        <input type="text" name="search" value="Search Cities" />
       </section>
 
       <section className="sort-by-area">
-        <div>390 results found</div>
-      <div className="sort-options">
-        <select name="sort-by" className="sort-by">
-          <option value="price-asc">Highest Price</option>
-        <option value="price-dsc">Lowest Price</option>
-        </select>
-        <div className="view">
-          <i className="fa fa-th-list" aria-hidden="true"></i>
-          <i className="fa fa-th" aria-hidden="true"></i>
+        <div className="results">390 results found</div>
+        <div className="sort-options">
+          <select name="sort-by" className="sort-by">
+            <option value="price-asc">Highest Price</option>
+          <option value="price-dsc">Lowest Price</option>
+          </select>
+          <div className="view">
+            <i className="fa fa-th-list" aria-hidden="true"></i>
+            <i className="fa fa-th" aria-hidden="true"></i>
+          </div>
         </div>
-      </div>
       </section>
 
       <section className="listings-results">
@@ -34,7 +34,6 @@ export default class Listings extends Component {
             <span className="address">Address</span>
             <div className="details">
               <div className="user-img">
-
               </div>
               <div className="user-details">
                 <span className="user-name">
@@ -53,22 +52,18 @@ export default class Listings extends Component {
                   <i className="fa fa-bed" aria-hidden="true"></i>
                   <span>3 Bedrooms</span>
                 </div>
-
               </div>
             </div>
           </div>
-
           <div className="bottom-info">
             <span>
-              $1000 / month
+              $2000 / month
             </span>
             <span>
               <i className="fa fa-map-marker" aria-hidden="true"></i>
               Hollywood, CA
             </span>
           </div>
-
-
         </div>
       </section>
 

@@ -3,6 +3,8 @@
   color: white;
   width: 30%;
   max-width: 300px;
+  display: inline-block;
+  float: left;
 
   .inside {
     padding: 30px 25px 30px 45px;
@@ -67,5 +69,79 @@
 
 
 #listings {
+  width: 70%;
+  float: left;
+  display: inline-block;
+  padding: 30px;
+  background: $realLightGrey;
+
+  .search-area {
+    input[type="text"] {
+      font-weight: 200;
+      width: 70%;
+      background: transparent;
+      font-size: 32px;
+      border: none;
+      border-bottom: 2px solid $darkBrown;
+      margin-bottom: 20px;
+      color: $darkBrown;
+    }
+  }
+
+  .sort-by-area {
+    margin-bottom: 20px;
+    .results {
+      color: $darkBrown;
+      font-size: 12px;
+      display: inline-block;
+      float: left;
+    }
+
+    .sort-options {
+      display: inline-block;
+      float: right;
+
+      select {
+        font-size: 10px;
+        font-weight: 300;
+        color: $darkBrown;
+        border: 1px solid $darkBrown;
+        background: transparent;
+        padding: 20px;
+      }
+
+      .sort-by {
+        display: inline-block;
+        float: left;
+      }
+
+      .view {
+        display: inline-block;
+        float: right;
+        margin-left: 20px;
+        i {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END

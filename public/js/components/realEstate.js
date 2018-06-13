@@ -450,18 +450,18 @@ var Listings = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'listings' },
+        { id: 'listings' },
         _react2.default.createElement(
           'section',
           { className: 'search-area' },
-          _react2.default.createElement('input', { type: 'text', name: 'search' })
+          _react2.default.createElement('input', { type: 'text', name: 'search', value: 'Search Cities' })
         ),
         _react2.default.createElement(
           'section',
           { className: 'sort-by-area' },
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'results' },
             '390 results found'
           ),
           _react2.default.createElement(
@@ -553,7 +553,7 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'span',
                 null,
-                '$1000 / month'
+                '$2000 / month'
               ),
               _react2.default.createElement(
                 'span',
