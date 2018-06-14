@@ -66,7 +66,7 @@ export default class Listings extends Component {
             </div>
           </div>
           <div className="bottom-info">
-            <span>
+            <span className="price">
               $2000 / month
             </span>
             <span>

@@ -565,7 +565,7 @@ var Listings = function (_Component) {
               { className: 'bottom-info' },
               _react2.default.createElement(
                 'span',
-                null,
+                { className: 'price' },
                 '$2000 / month'
               ),
               _react2.default.createElement(
