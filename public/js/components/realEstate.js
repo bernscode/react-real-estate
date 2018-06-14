@@ -501,7 +501,7 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'address' },
-                'Address'
+                '515 Sherwood Dr.'
               ),
               _react2.default.createElement(
                 'div',

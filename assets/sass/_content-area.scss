@@ -179,6 +179,19 @@
         .details {
           opacity: 1;
         }
+        .address {
+          opacity: 0;
+        }
+      }
+
+
+      .address {
+        position: absolute;
+        bottom: 20px;
+        opacity: 1;
+        transition: all .5s ease-in-out;
+        font-size: 21px;
+        font-weight: 300;
       }
 
 
