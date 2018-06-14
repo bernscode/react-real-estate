@@ -13,5 +13,11 @@ html {
 }
 
 
+.whole-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+
 @import "listings";
 @import "content-area";

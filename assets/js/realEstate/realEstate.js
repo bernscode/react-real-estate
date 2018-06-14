@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
   render () {
-    return (<div>
+    return (<div className="whole-screen">
       <Header />
     <section id="content-area">
         <Filter />
