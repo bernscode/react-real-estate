@@ -570,7 +570,7 @@ var Listings = function (_Component) {
               ),
               _react2.default.createElement(
                 'span',
-                null,
+                { className: 'location' },
                 _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
                 'Hollywood, CA'
               )

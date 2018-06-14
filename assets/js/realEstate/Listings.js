@@ -69,7 +69,7 @@ export default class Listings extends Component {
             <span className="price">
               $2000 / month
             </span>
-            <span>
+            <span className="location">
               <i className="fa fa-map-marker" aria-hidden="true"></i>
               Hollywood, CA
             </span>

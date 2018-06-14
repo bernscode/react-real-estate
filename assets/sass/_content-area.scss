@@ -310,6 +310,17 @@
 
     .bottom-info {
       padding: 20px 15px;
+
+      .price {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 7px;
+      }
+
+      .location {
+        font-size: 17px;
+        display: block;
+      }
     }
 
   }
