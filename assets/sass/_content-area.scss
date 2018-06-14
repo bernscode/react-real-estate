@@ -212,15 +212,13 @@
         .user-details {
           vertical-align: top;
           display: inline-block;
-          width: 70%;
-          margin-left: 20px;
 
           .user-name {
             font-size: 15px;
             font-weight: 300;
             display: block;
             color: rgba(255,255,255, 1);
-            margin-top: 8px;
+            margin-top: 5px;
             margin-bottom: 5px;
           }
 
@@ -230,9 +228,9 @@
             color: rgba(255,255,255, .7)
           }
         }
-
         .listing-details {
           margin-top: 20px;
+          margin-bottom: 20px;
 
           .fa {
             display: inline-block;
@@ -248,6 +246,31 @@
             top: 3px;
           }
 
+
+          .square-feet {
+            margin-bottom: 7px;
+          }
+
+          .bedrooms {
+
+          }
+        }
+
+
+        .view-btn {
+          background: $darkBrown;
+          padding: 4px 4px;
+          font-size: 14px;
+          border-radius: 5px;
+          text-align: center;
+          width: 75%;
+          max-height: 150px;
+          &:hover {
+            background: $gold;
+            cursor: pointer;
+            color: $darkBrown;
+            font-weight: 400;
+          }
         }
 
 
@@ -262,8 +285,18 @@
 
 
 
+.col-md-3 {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+
+}
 
 
+.col-md-9 {
+  width: 75%;
+  display: inline-block;
+}
 
 
 

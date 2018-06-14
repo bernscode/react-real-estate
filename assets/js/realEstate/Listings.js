@@ -33,26 +33,36 @@ export default class Listings extends Component {
           <div className="listing-img">
             <span className="address">Address</span>
             <div className="details">
-              <div className="user-img">
-              </div>
-              <div className="user-details">
-                <span className="user-name">
-                  Hector A. Bernal
-                </span>
-                <span className="post-date">
-                  06/12/2018
-                </span>
-              </div>
-              <div className="listing-details">
-                <div className="square-feet">
-                  <i className="fa fa-square-o" aria-hidden="true"></i>
-                <span>2523 ft&sup2;</span>
-                </div>
-                <div className="bedrooms">
-                  <i className="fa fa-bed" aria-hidden="true"></i>
-                  <span>3 Bedrooms</span>
+              <div className="col-md-3">
+                <div className="user-img">
                 </div>
               </div>
+              <div className="col-md-9">
+                <div className="user-details">
+                  <span className="user-name">
+                    Hector A. Bernal
+                  </span>
+                  <span className="post-date">
+                    06/12/2018
+                  </span>
+                </div>
+                <div className="listing-details">
+                  <div className="square-feet">
+                    <i className="fa fa-square-o" aria-hidden="true"></i>
+                  <span>2523 ft&sup2;</span>
+                  </div>
+                  <div className="bedrooms">
+                    <i className="fa fa-bed" aria-hidden="true"></i>
+                    <span>3 Bedrooms</span>
+                  </div>
+                </div>
+
+                <div className="view-btn">
+                  View Listing
+                </div>
+
+              </div>
+
             </div>
           </div>
           <div className="bottom-info">

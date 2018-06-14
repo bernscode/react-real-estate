@@ -506,43 +506,56 @@ var Listings = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'details' },
-                _react2.default.createElement('div', { className: 'user-img' }),
                 _react2.default.createElement(
                   'div',
-                  { className: 'user-details' },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'user-name' },
-                    'Hector A. Bernal'
-                  ),
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'post-date' },
-                    '06/12/2018'
-                  )
+                  { className: 'col-md-3' },
+                  _react2.default.createElement('div', { className: 'user-img' })
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'listing-details' },
+                  { className: 'col-md-9' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'square-feet' },
-                    _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                    { className: 'user-details' },
                     _react2.default.createElement(
                       'span',
-                      null,
-                      '2523 ft\xB2'
+                      { className: 'user-name' },
+                      'Hector A. Bernal'
+                    ),
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'post-date' },
+                      '06/12/2018'
                     )
                   ),
                   _react2.default.createElement(
                     'div',
-                    { className: 'bedrooms' },
-                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    { className: 'listing-details' },
                     _react2.default.createElement(
-                      'span',
-                      null,
-                      '3 Bedrooms'
+                      'div',
+                      { className: 'square-feet' },
+                      _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        '2523 ft\xB2'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'bedrooms' },
+                      _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        '3 Bedrooms'
+                      )
                     )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'view-btn' },
+                    'View Listing'
                   )
                 )
               )
