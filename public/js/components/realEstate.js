@@ -1,6 +1,141 @@
 webpackJsonp([0],{
 
-/***/ 101:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSYmeMnhZAXPN1KmpVQNQee7hGvMlLd5m9N48o0hYM1Sa0ORU8Q'
+
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqB-6SvXoj8J4FVBn3t-FUQN9vGEb4p4eYUNgh2FLBQeJigIB'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2wEJLGiGZIpL82s8J0yq6s7AfXgkZmTip7XnAQwOYVt3Afqx'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqc5eWMNEbkZYs1jQL-d1VJuOyVnGKZDsRWaHL7y-HSCvkruVL'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtu-X3dkZ9IxdHG88r7bHpTLOoxKmI1WaX1SMmiTrpnkt7-8th'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq4tXDkjsxTYdIuZf4Ov2Zjp5XVOW-QJsZ1-GxAlvA3Dn3kAexQg'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDTe7KWulkTF9Yifx0VUAli_7iTcbtTDSUPE6OrucY68UfVjM'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuK3Sfp5J2xIhMa5qU9nzSLFdGQqSUEkkRWKoHCkltpkC7BtkPqg'
+}, {
+  neighborhood: 'Los Angeles',
+  houseType: 'Houses',
+  address: '6231 Hacienda Pl',
+  city: 'Hollywood',
+  state: 'CA',
+  bedroom: 4,
+  bathroom: 3,
+  price: 850000,
+  squareFeet: 3115,
+  lotSize: 4312,
+  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2fNSEbdycsKD2VZVRNTf6ckD1lYz0o8HTyhpXjGeGe0AsSGIH'
+}];
+
+exports.default = listingsData;
+
+// END
+
+/***/ }),
+
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28,6 +163,10 @@ var _Listings = __webpack_require__(99);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _listingsData = __webpack_require__(100);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45,7 +184,8 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: 'bern'
+      name: 'bern',
+      listingsData: _listingsData2.default
     };
     return _this;
   }
@@ -149,7 +289,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'house-type', className: 'filters house-type' },
+            { name: 'houseType', className: 'filters houseType' },
             _react2.default.createElement(
               'option',
               null,
@@ -237,25 +377,25 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'filters square-feet' },
+            { className: 'filters squareFeet' },
             _react2.default.createElement(
               'span',
               { className: 'title' },
               'Square Feet'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-square-feet', className: 'min-square-feet' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-square-feet', className: 'max-square-feet' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-squareFeet', className: 'min-squareFeet' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-squareFeet', className: 'max-squareFeet' })
           ),
           _react2.default.createElement(
             'div',
-            { className: 'filters lot-size' },
+            { className: 'filters lotSize' },
             _react2.default.createElement(
               'span',
               { className: 'title' },
               'Lot Size'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-lot-size', className: 'min-lot-size' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-lot-size', className: 'max-lot-size' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-lotSize', className: 'min-lotSize' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-lotSize', className: 'max-lotSize' })
           ),
           _react2.default.createElement(
             'div',
@@ -536,7 +676,7 @@ var Listings = function (_Component) {
                       { className: 'listing-details' },
                       _react2.default.createElement(
                         'div',
-                        { className: 'square-feet' },
+                        { className: 'squareFeet' },
                         _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
                         _react2.default.createElement(
                           'span',
@@ -624,7 +764,7 @@ var Listings = function (_Component) {
                       { className: 'listing-details' },
                       _react2.default.createElement(
                         'div',
-                        { className: 'square-feet' },
+                        { className: 'squareFeet' },
                         _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
                         _react2.default.createElement(
                           'span',
@@ -712,7 +852,7 @@ var Listings = function (_Component) {
                       { className: 'listing-details' },
                       _react2.default.createElement(
                         'div',
-                        { className: 'square-feet' },
+                        { className: 'squareFeet' },
                         _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
                         _react2.default.createElement(
                           'span',
@@ -811,4 +951,4 @@ exports.default = Listings;
 
 /***/ })
 
-},[101]);
+},[102]);

@@ -17,7 +17,7 @@ export default class Filter extends Component {
         <option>Orange County</option>
         <option>Ventura County</option>
       </select>
-      <select name="house-type" className="filters house-type">
+      <select name="houseType" className="filters houseType">
         <option>Houses</option>
         <option>Condos</option>
         <option>Townhomes</option>
@@ -41,15 +41,15 @@ export default class Filter extends Component {
         <input type="text" name="min-price" className="min-price"/>
         <input type="text" name="max-price" className="max-price"/>
       </div>
-      <div className="filters square-feet">
+      <div className="filters squareFeet">
         <span className="title">Square Feet</span>
-        <input type="text" name="min-square-feet" className="min-square-feet"/>
-        <input type="text" name="max-square-feet" className="max-square-feet"/>
+        <input type="text" name="min-squareFeet" className="min-squareFeet"/>
+        <input type="text" name="max-squareFeet" className="max-squareFeet"/>
       </div>
-      <div className="filters lot-size">
+      <div className="filters lotSize">
         <span className="title">Lot Size</span>
-        <input type="text" name="min-lot-size" className="min-lot-size"/>
-        <input type="text" name="max-lot-size" className="max-lot-size"/>
+        <input type="text" name="min-lotSize" className="min-lotSize"/>
+        <input type="text" name="max-lotSize" className="max-lotSize"/>
       </div>
       <div className="filters features">
         <span className="title">Features</span>

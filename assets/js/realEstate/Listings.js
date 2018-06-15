@@ -48,7 +48,7 @@ export default class Listings extends Component {
                     </span>
                   </div>
                   <div className="listing-details">
-                    <div className="square-feet">
+                    <div className="squareFeet">
                       <i className="fa fa-square-o" aria-hidden="true"></i>
                     <span>2523 ft&sup2;</span>
                     </div>
@@ -97,7 +97,7 @@ export default class Listings extends Component {
                     </span>
                   </div>
                   <div className="listing-details">
-                    <div className="square-feet">
+                    <div className="squareFeet">
                       <i className="fa fa-square-o" aria-hidden="true"></i>
                     <span>2523 ft&sup2;</span>
                     </div>
@@ -146,7 +146,7 @@ export default class Listings extends Component {
                     </span>
                   </div>
                   <div className="listing-details">
-                    <div className="square-feet">
+                    <div className="squareFeet">
                       <i className="fa fa-square-o" aria-hidden="true"></i>
                     <span>2523 ft&sup2;</span>
                     </div>
