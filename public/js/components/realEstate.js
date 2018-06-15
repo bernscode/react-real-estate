@@ -569,7 +569,7 @@ var Listings = function (_Component) {
                 _react2.default.createElement(
                   'span',
                   { className: 'price' },
-                  '$3500 / month'
+                  '$750000'
                 ),
                 _react2.default.createElement(
                   'span',
@@ -657,7 +657,7 @@ var Listings = function (_Component) {
                 _react2.default.createElement(
                   'span',
                   { className: 'price' },
-                  '$3500 / month'
+                  '$750000'
                 ),
                 _react2.default.createElement(
                   'span',
@@ -745,7 +745,7 @@ var Listings = function (_Component) {
                 _react2.default.createElement(
                   'span',
                   { className: 'price' },
-                  '$3500 / month'
+                  '$750000'
                 ),
                 _react2.default.createElement(
                   'span',
