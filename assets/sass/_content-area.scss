@@ -367,6 +367,49 @@
 
 
 
+
+
+
+#pagination {
+  text-align: center;
+
+  .pages{
+    margin-left: 0 auto;
+    display: inline-block;
+    background: white;
+    // -webkit-box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+    // -moz-box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+    // box-shadow: 13px 19px 66px -36px rgba(29,62,76,1);
+
+    -webkit-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+    -moz-box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+    box-shadow: 0 9px 54px -4px rgba(224,224,224,1);
+
+    li {
+      padding: 20px 30px;
+      display: inline-block;
+
+      &:hover,
+      &.active {
+        color: white;
+        font-weight: 700;
+        background: $gold;
+        border-radius: 5%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .col-md-3 {
   width: 25%;
   display: inline-block;
