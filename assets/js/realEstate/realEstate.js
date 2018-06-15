@@ -14,6 +14,7 @@ class App extends Component {
     }
   }
   render () {
+    console.log(this.state)
     return (<div className="whole-screen">
       <Header />
     <section id="content-area">
