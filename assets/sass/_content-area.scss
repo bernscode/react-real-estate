@@ -389,12 +389,19 @@
       padding: 20px 30px;
       display: inline-block;
 
-      &:hover,
       &.active {
         color: white;
-        font-weight: 700;
+        font-weight: 400;
+        background: $lightBrown;
+        border-radius: 5%;
+        cursor: pointer;
+      }
+      &:hover {
+        color: white;
+        font-weight: 400;
         background: $gold;
         border-radius: 5%;
+        cursor: pointer;
       }
     }
   }
