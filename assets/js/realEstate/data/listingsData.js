@@ -15,7 +15,7 @@ var listingsData = [
       'Swimming Pool',
       'Fireplace'
     ],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSYmeMnhZAXPN1KmpVQNQee7hGvMlLd5m9N48o0hYM1Sa0ORU8Q'
+    image: 'https://st.hzcdn.com/simgs/033111fd00a5142b_4-5887/modern-exterior.jpg'
 
   },
   {
