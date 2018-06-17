@@ -342,9 +342,8 @@
           text-align: center;
           width: 75%;
           max-height: 150px;
-          transition: background .4s ease-in-out;
-          transition: color .5s ease-in-out;
 
+          transition: color .4s ease-in-out, background-color .3s ease-in-out, font-weight .2s ease-in-out;
           &:hover {
             background: $gold;
             cursor: pointer;
