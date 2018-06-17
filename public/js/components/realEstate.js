@@ -21,7 +21,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://st.hzcdn.com/simgs/033111fd00a5142b_4-5887/modern-exterior.jpg'
+  image: './img/house_1.jpg'
 
 }, {
   neighborhood: 'Los Angeles',
@@ -35,7 +35,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqB-6SvXoj8J4FVBn3t-FUQN9vGEb4p4eYUNgh2FLBQeJigIB'
+  image: './img/house_2.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -48,7 +48,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2wEJLGiGZIpL82s8J0yq6s7AfXgkZmTip7XnAQwOYVt3Afqx'
+  image: './img/house_3.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -61,7 +61,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqc5eWMNEbkZYs1jQL-d1VJuOyVnGKZDsRWaHL7y-HSCvkruVL'
+  image: './img/house_4.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -74,7 +74,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtu-X3dkZ9IxdHG88r7bHpTLOoxKmI1WaX1SMmiTrpnkt7-8th'
+  image: './img/house_5.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -87,7 +87,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq4tXDkjsxTYdIuZf4Ov2Zjp5XVOW-QJsZ1-GxAlvA3Dn3kAexQg'
+  image: './img/house_6.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -100,7 +100,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDTe7KWulkTF9Yifx0VUAli_7iTcbtTDSUPE6OrucY68UfVjM'
+  image: './img/house_7.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -113,7 +113,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuK3Sfp5J2xIhMa5qU9nzSLFdGQqSUEkkRWKoHCkltpkC7BtkPqg'
+  image: './img/house_8.jpg'
 }, {
   neighborhood: 'Los Angeles',
   houseType: 'Houses',
@@ -126,7 +126,7 @@ var listingsData = [{
   squareFeet: 3115,
   lotSize: 4312,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2fNSEbdycsKD2VZVRNTf6ckD1lYz0o8HTyhpXjGeGe0AsSGIH'
+  image: './img/house_9.jpg'
 }];
 
 exports.default = listingsData;
