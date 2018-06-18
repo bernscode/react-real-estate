@@ -109,7 +109,7 @@ var listingsData = [{
   state: 'CA',
   bedroom: 3,
   bathroom: 2,
-  price: 59000,
+  price: 590000,
   squareFeet: 3214,
   lotSize: 4572,
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
@@ -236,7 +236,7 @@ var App = function (_Component) {
       var _this3 = this;
 
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price;
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.squareFeet >= _this3.state.min_squareFeet && item.squareFeet <= _this3.state.max_squareFeet && item.lotSize >= _this3.state.min_lotSize && item.lotSize <= _this3.state.max_lotSize;
       });
 
       this.setState({

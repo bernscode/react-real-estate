@@ -131,7 +131,7 @@ var listingsData = [
     state: 'CA',
     bedroom: 3,
     bathroom: 2,
-    price: 59000,
+    price: 590000,
     squareFeet: 3214,
     lotSize: 4572,
     features: [

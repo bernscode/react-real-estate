@@ -48,7 +48,11 @@ class App extends Component {
   // method for filtering data
   filteredData() {
     var newData = this.state.listingsData.filter((item) => {
-      return item.price >= this.state.min_price
+      return item.price >= this.state.min_price &&
+      item.price <= this.state.max_price &&
+      item.squareFeet >= this.state.min_squareFeet && item.squareFeet <= this.state.max_squareFeet &&
+      item.lotSize >= this.state.min_lotSize &&
+      item.lotSize <= this.state.max_lotSize
     })
 
     this.setState({
