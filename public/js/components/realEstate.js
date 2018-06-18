@@ -590,10 +590,16 @@ var Listings = function (_Component) {
   _createClass(Listings, [{
     key: 'loopListings',
     value: function loopListings() {
+
+      // alternate syntax for declaring variable
+      // var data = this.props.listingsData
+
       var listingsData = this.props.listingsData;
 
+      // passing the index for each child in the array
 
       return listingsData.map(function (listing, index) {
+        // created a key for each child in the array
         return _react2.default.createElement(
           'div',
           { className: 'col-md-3-listing', key: index },

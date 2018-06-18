@@ -12,9 +12,14 @@ export default class Listings extends Component {
 
   loopListings () {
 
+    // alternate syntax for declaring variable
+    // var data = this.props.listingsData
+
     var {listingsData} = this.props
 
+    // passing the index for each child in the array
     return listingsData.map((listing, index) => {
+      // created a key for each child in the array
       return (<div className="col-md-3-listing" key={index}>
         <div className="listing">
           <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
@@ -87,6 +92,7 @@ export default class Listings extends Component {
 
       <section className="listings-results">
 
+      {/* //Call loopListings function */}
       {this.loopListings()}
 
       </section>
