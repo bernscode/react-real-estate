@@ -55,7 +55,7 @@ var listingsData = [{
   address: '2113 Park Pl',
   city: 'Irvine',
   state: 'CA',
-  bedroom: 5,
+  bedroom: 4,
   bathroom: 4,
   price: 885000,
   squareFeet: 3815,
@@ -68,8 +68,8 @@ var listingsData = [{
   address: '638 Hollints Ct',
   city: 'Simi Valley',
   state: 'CA',
-  bedroom: 3,
-  bathroom: 3,
+  bedroom: 2,
+  bathroom: 2,
   price: 620000,
   squareFeet: 2815,
   lotSize: 4035,
@@ -81,7 +81,7 @@ var listingsData = [{
   address: '854 Summit Dr',
   city: 'Downey',
   state: 'CA',
-  bedroom: 5,
+  bedroom: 4,
   bathroom: 3,
   price: 970000,
   squareFeet: 4316,
@@ -203,7 +203,7 @@ var App = function (_Component) {
       var _this2 = this;
 
       var name = event.target.name;
-      var value = event.target.value;
+      var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
 
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
@@ -310,91 +310,91 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'houseType', className: 'filters houseType' },
+            { name: 'houseType', className: 'filters houseType', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Houses' },
               'Houses'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Condos' },
               'Condos'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Townhomes' },
               'Townhomes'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Manufacured' },
               'Manufacured'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Lots / Land' },
               'Lots / Land'
             )
           ),
           _react2.default.createElement(
             'select',
-            { name: 'bedroom', className: 'filters bedroom' },
+            { name: 'bedroom', className: 'filters bedroom', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              null,
+              { value: '1' },
               '1 Bedroom'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '2 Bedroom'
+              { value: '2' },
+              '2 Bedrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '3 Bedroom'
+              { value: '3' },
+              '3 Bedrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '4+ Bedroom'
+              { value: '4' },
+              '4+ Bedrooms'
             )
           ),
           _react2.default.createElement(
             'select',
-            { name: 'bathroom', className: 'filters bathroom' },
+            { name: 'bathroom', className: 'filters bathroom', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              null,
+              { value: '1' },
               '1 Bathroom'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '2 Bathroom'
+              { value: '2' },
+              '2 Bathrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '3 Bathroom'
+              { value: '3' },
+              '3 Bathrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              '4+ Bathroom'
+              { value: '4' },
+              '4+ Bathrooms'
             )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'filters price' },
+            { className: 'filters price', onChange: this.props.change },
             _react2.default.createElement(
               'span',
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price', onChange: this.props.change, value: '0' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price', onChange: this.props.change, value: '10000000' })
           ),
           _react2.default.createElement(
             'div',
@@ -404,8 +404,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Square Feet'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-squareFeet', className: 'min-squareFeet' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-squareFeet', className: 'max-squareFeet' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-squareFeet', className: 'min-squareFeet', onChange: this.props.change, value: '0' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-squareFeet', className: 'max-squareFeet', onChange: this.props.change, value: '10000' })
           ),
           _react2.default.createElement(
             'div',
@@ -415,8 +415,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Lot Size'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-lotSize', className: 'min-lotSize' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-lotSize', className: 'max-lotSize' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-lotSize', className: 'min-lotSize', onChange: this.props.change, value: '0' }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-lotSize', className: 'max-lotSize', onChange: this.props.change, value: '50000' })
           ),
           _react2.default.createElement(
             'div',
@@ -434,7 +434,7 @@ var Filter = function (_Component) {
                 null,
                 'Garage'
               ),
-              _react2.default.createElement('input', { name: 'features', value: 'Garage', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'features', value: 'Garage', type: 'checkbox', onChange: this.props.change })
             ),
             _react2.default.createElement(
               'label',
@@ -444,7 +444,7 @@ var Filter = function (_Component) {
                 null,
                 'Swimming Pool'
               ),
-              _react2.default.createElement('input', { name: 'features', value: 'Swimming Pool', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'features', value: 'Swimming Pool', type: 'checkbox', onChange: this.props.change })
             ),
             _react2.default.createElement(
               'label',
@@ -454,7 +454,7 @@ var Filter = function (_Component) {
                 null,
                 'Fireplace'
               ),
-              _react2.default.createElement('input', { name: 'features', value: 'Fireplace', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'features', value: 'Fireplace', type: 'checkbox', onChange: this.props.change })
             ),
             _react2.default.createElement(
               'label',
@@ -464,7 +464,7 @@ var Filter = function (_Component) {
                 null,
                 'Guest House'
               ),
-              _react2.default.createElement('input', { name: 'features', value: 'Guest House', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'features', value: 'Guest House', type: 'checkbox', onChange: this.props.change })
             )
           )
         )
