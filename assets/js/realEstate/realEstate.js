@@ -12,13 +12,22 @@ class App extends Component {
       name: 'bern',
       listingsData
     }
+
+    this.change = this.change.bind(this)
   }
+
+  // method for filter
+  change() {
+
+  }
+
+
   render () {
     console.log(this.state)
     return (<div className="whole-screen">
       <Header />
     <section id="content-area">
-        <Filter />
+        <Filter change={this.change} />
       <Listings listingsData={this.state.listingsData} />
       </section>
       </div>)

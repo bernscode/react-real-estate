@@ -187,10 +187,18 @@ var App = function (_Component) {
       name: 'bern',
       listingsData: _listingsData2.default
     };
+
+    _this.change = _this.change.bind(_this);
     return _this;
   }
 
+  // method for filter
+
+
   _createClass(App, [{
+    key: 'change',
+    value: function change() {}
+  }, {
     key: 'render',
     value: function render() {
       console.log(this.state);
@@ -201,7 +209,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           'section',
           { id: 'content-area' },
-          _react2.default.createElement(_Filter2.default, null),
+          _react2.default.createElement(_Filter2.default, { change: this.change }),
           _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
