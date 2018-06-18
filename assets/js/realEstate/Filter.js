@@ -39,36 +39,36 @@ export default class Filter extends Component {
       </select>
       <div className="filters price" onChange={this.props.change}>
         <span className="title">Price</span>
-        <input type="text" name="min-price" className="min-price" onChange={this.props.change} value="0" />
-        <input type="text" name="max-price" className="max-price" onChange={this.props.change} value="10000000" />
+      <input type="text" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
+    <input type="text" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
       </div>
       <div className="filters squareFeet">
         <span className="title">Square Feet</span>
-        <input type="text" name="min-squareFeet" className="min-squareFeet" onChange={this.props.change} value="0" />
-        <input type="text" name="max-squareFeet" className="max-squareFeet" onChange={this.props.change} value="10000" />
+      <input type="text" name="min_squareFeet" className="min-squareFeet" onChange={this.props.change} value={this.props.globalState.min_squareFeet} />
+    <input type="text" name="max_squareFeet" className="max-squareFeet" onChange={this.props.change} value={this.props.globalState.max_squareFeet} />
       </div>
       <div className="filters lotSize">
         <span className="title">Lot Size</span>
-        <input type="text" name="min-lotSize" className="min-lotSize" onChange={this.props.change} value="0" />
-        <input type="text" name="max-lotSize" className="max-lotSize" onChange={this.props.change} value="50000" />
+        <input type="text" name="min_lotSize" className="min-lotSize" onChange={this.props.change} value={this.props.globalState.min_lotSize} />
+        <input type="text" name="max_lotSize" className="max-lotSize" onChange={this.props.change} value={this.props.globalState.max_lotSize} />
       </div>
       <div className="filters features">
         <span className="title">Features</span>
         <label htmlFor="features">
           <span>Garage</span>
-        <input name="features" value="Garage" type="checkbox" onChange={this.props.change} />
+          <input name="Garage" value="Garage" type="checkbox" onChange={this.props.change} />
         </label>
         <label htmlFor="features">
           <span>Swimming Pool</span>
-        <input name="features" value="Swimming Pool" type="checkbox" onChange={this.props.change} />
+          <input name="Swimming_Pool" value="Swimming_Pool" type="checkbox" onChange={this.props.change} />
         </label>
         <label htmlFor="features">
           <span>Fireplace</span>
-        <input name="features" value="Fireplace" type="checkbox" onChange={this.props.change} />
+          <input name="Fireplace" value="Fireplace" type="checkbox" onChange={this.props.change} />
         </label>
         <label htmlFor="features">
           <span>Guest House</span>
-        <input name="features" value="Guest House" type="checkbox" onChange={this.props.change} />
+          <input name="Guest_House" value="Guest_House" type="checkbox" onChange={this.props.change} />
         </label>
       </div>
 
