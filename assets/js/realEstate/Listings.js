@@ -17,6 +17,11 @@ export default class Listings extends Component {
 
     var {listingsData} = this.props
 
+    // if statement for listingsData
+    if(listingsData == undefined || listingsData.length == 0) {
+      return "Sorry your filter did not mach any listing."
+    }
+
     // passing the index for each child in the array
     return listingsData.map((listing, index) => {
       // created a key for each child in the array

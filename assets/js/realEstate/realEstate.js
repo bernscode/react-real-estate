@@ -21,10 +21,12 @@ class App extends Component {
       Fireplace: false,
       Garage: false,
       Guest_House: false,
-      Swimming_Pool: false
+      Swimming_Pool: false,
+      filteredData: listingsData
     }
 
     this.change = this.change.bind(this)
+    this.filteredData = this.filteredData.bind(this)
   }
 
   // method for filter
@@ -36,18 +38,30 @@ class App extends Component {
       [name]: value
     }, () => {
       console.log(this.state)
+
+      this.filteredData()
     })
     // test for target value
     // console.log(event.target.value)
   }
 
+  // method for filtering data
+  filteredData() {
+    var newData = this.state.listingsData.filter((item) => {
+      return item.price >= this.state.min_price
+    })
+
+    this.setState({
+      filteredData: newData
+    })
+  }
 
   render () {
     return (<div className="whole-screen">
       <Header />
     <section id="content-area">
         <Filter change={this.change} globalState={this.state} />
-      <Listings listingsData={this.state.listingsData} />
+      <Listings listingsData={this.state.filteredData} />
       </section>
       </div>)
   }

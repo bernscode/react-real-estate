@@ -199,10 +199,12 @@ var App = function (_Component) {
       Fireplace: false,
       Garage: false,
       Guest_House: false,
-      Swimming_Pool: false
+      Swimming_Pool: false,
+      filteredData: _listingsData2.default
     };
 
     _this.change = _this.change.bind(_this);
+    _this.filteredData = _this.filteredData.bind(_this);
     return _this;
   }
 
@@ -219,9 +221,27 @@ var App = function (_Component) {
 
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+
+        _this2.filteredData();
       });
       // test for target value
       // console.log(event.target.value)
+    }
+
+    // method for filtering data
+
+  }, {
+    key: 'filteredData',
+    value: function filteredData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price;
+      });
+
+      this.setState({
+        filteredData: newData
+      });
     }
   }, {
     key: 'render',
@@ -234,7 +254,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
@@ -628,8 +648,13 @@ var Listings = function (_Component) {
 
       var listingsData = this.props.listingsData;
 
-      // passing the index for each child in the array
+      // if statement for listingsData
 
+      if (listingsData == undefined || listingsData.length == 0) {
+        return "Sorry your filter did not mach any listing.";
+      }
+
+      // passing the index for each child in the array
       return listingsData.map(function (listing, index) {
         // created a key for each child in the array
         return _react2.default.createElement(
