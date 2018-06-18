@@ -12,10 +12,11 @@ export default class Filter extends Component {
     return (<section id="filter">
     <div className="inside">
       <h4>Filter</h4>
-      <select name="neighborhood" className="filters neighborhood">
-        <option>Los Angeles County</option>
-        <option>Orange County</option>
-        <option>Ventura County</option>
+    {/* setup change() */}
+    <select name="neighborhood" className="filters neighborhood" onChange={this.props.change}>
+        <option value="Los Angeles County">Los Angeles County</option>
+      <option value="Orange County">Orange County</option>
+    <option value="Ventura County">Ventura County</option>
       </select>
       <select name="houseType" className="filters houseType">
         <option>Houses</option>
@@ -53,19 +54,19 @@ export default class Filter extends Component {
       </div>
       <div className="filters features">
         <span className="title">Features</span>
-        <label for="features">
+        <label htmlFor="features">
           <span>Garage</span>
         <input name="features" value="Garage" type="checkbox" />
         </label>
-        <label for="features">
+        <label htmlFor="features">
           <span>Swimming Pool</span>
         <input name="features" value="Swimming Pool" type="checkbox" />
         </label>
-        <label for="features">
+        <label htmlFor="features">
           <span>Fireplace</span>
         <input name="features" value="Fireplace" type="checkbox" />
         </label>
-        <label for="features">
+        <label htmlFor="features">
           <span>Guest House</span>
         <input name="features" value="Guest House" type="checkbox" />
         </label>

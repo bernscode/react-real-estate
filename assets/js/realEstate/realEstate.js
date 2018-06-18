@@ -17,13 +17,21 @@ class App extends Component {
   }
 
   // method for filter
-  change() {
+  change(event) {
+    var name = event.target.name
+    var value = event.target.value
 
+    this.setState({
+      [name]: value
+    }, () => {
+      console.log(this.state)
+    })
+    // test for target value
+    // console.log(event.target.value)
   }
 
 
   render () {
-    console.log(this.state)
     return (<div className="whole-screen">
       <Header />
     <section id="content-area">

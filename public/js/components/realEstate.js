@@ -169,6 +169,8 @@ var _listingsData2 = _interopRequireDefault(_listingsData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -197,11 +199,21 @@ var App = function (_Component) {
 
   _createClass(App, [{
     key: 'change',
-    value: function change() {}
+    value: function change(event) {
+      var _this2 = this;
+
+      var name = event.target.name;
+      var value = event.target.value;
+
+      this.setState(_defineProperty({}, name, value), function () {
+        console.log(_this2.state);
+      });
+      // test for target value
+      // console.log(event.target.value)
+    }
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state);
       return _react2.default.createElement(
         'div',
         { className: 'whole-screen' },
@@ -279,20 +291,20 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'neighborhood', className: 'filters neighborhood' },
+            { name: 'neighborhood', className: 'filters neighborhood', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Los Angeles County' },
               'Los Angeles County'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Orange County' },
               'Orange County'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'Ventura County' },
               'Ventura County'
             )
           ),
@@ -416,7 +428,7 @@ var Filter = function (_Component) {
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'features' },
+              { htmlFor: 'features' },
               _react2.default.createElement(
                 'span',
                 null,
@@ -426,7 +438,7 @@ var Filter = function (_Component) {
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'features' },
+              { htmlFor: 'features' },
               _react2.default.createElement(
                 'span',
                 null,
@@ -436,7 +448,7 @@ var Filter = function (_Component) {
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'features' },
+              { htmlFor: 'features' },
               _react2.default.createElement(
                 'span',
                 null,
@@ -446,7 +458,7 @@ var Filter = function (_Component) {
             ),
             _react2.default.createElement(
               'label',
-              { 'for': 'features' },
+              { htmlFor: 'features' },
               _react2.default.createElement(
                 'span',
                 null,
