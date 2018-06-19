@@ -1,7 +1,7 @@
 var listingsData = [
   {
     neighborhood: 'Los Angeles County',
-    houseType: 'Houses',
+    homeType: 'Houses',
     address: '6231 Hacienda Pl',
     city: 'Hollywood',
     state: 'CA',
@@ -20,7 +20,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Orange County',
-    houseType: 'Condos',
+    homeType: 'Condos',
     address: '511 Clark Way',
     city: 'Anaheim',
     state: 'CA',
@@ -37,7 +37,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Los Angeles County',
-    houseType: 'Townhomes',
+    homeType: 'Townhomes',
     address: '745 Granada Ave',
     city: 'Alhambra',
     state: 'CA',
@@ -54,7 +54,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Orange County',
-    houseType: 'Houses',
+    homeType: 'Houses',
     address: '2113 Park Pl',
     city: 'Irvine',
     state: 'CA',
@@ -72,7 +72,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Ventura County',
-    houseType: 'Condos',
+    homeType: 'Condos',
     address: '638 Hollints Ct',
     city: 'Simi Valley',
     state: 'CA',
@@ -89,7 +89,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Los Angeles County',
-    houseType: 'Houses',
+    homeType: 'Houses',
     address: '854 Summit Dr',
     city: 'Downey',
     state: 'CA',
@@ -108,7 +108,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Orange County',
-    houseType: 'Townhomes',
+    homeType: 'Townhomes',
     address: '9821 Crossroads Blvd',
     city: 'Orange',
     state: 'CA',
@@ -125,7 +125,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Ventura County',
-    houseType: 'Houses',
+    homeType: 'Houses',
     address: '341 Bright Way',
     city: 'Oxnard',
     state: 'CA',
@@ -143,7 +143,7 @@ var listingsData = [
   },
   {
     neighborhood: 'Los Angeles County',
-    houseType: 'Condos',
+    homeType: 'Condos',
     address: '536 Stormy St',
     city: 'Santa Monica',
     state: 'CA',

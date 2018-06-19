@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var listingsData = [{
   neighborhood: 'Los Angeles County',
-  houseType: 'Houses',
+  homeType: 'Houses',
   address: '6231 Hacienda Pl',
   city: 'Hollywood',
   state: 'CA',
@@ -25,7 +25,7 @@ var listingsData = [{
 
 }, {
   neighborhood: 'Orange County',
-  houseType: 'Condos',
+  homeType: 'Condos',
   address: '511 Clark Way',
   city: 'Anaheim',
   state: 'CA',
@@ -38,7 +38,7 @@ var listingsData = [{
   image: './img/house_2.jpg'
 }, {
   neighborhood: 'Los Angeles County',
-  houseType: 'Townhomes',
+  homeType: 'Townhomes',
   address: '745 Granada Ave',
   city: 'Alhambra',
   state: 'CA',
@@ -51,7 +51,7 @@ var listingsData = [{
   image: './img/house_3.jpg'
 }, {
   neighborhood: 'Orange County',
-  houseType: 'Houses',
+  homeType: 'Houses',
   address: '2113 Park Pl',
   city: 'Irvine',
   state: 'CA',
@@ -64,7 +64,7 @@ var listingsData = [{
   image: './img/house_4.jpg'
 }, {
   neighborhood: 'Ventura County',
-  houseType: 'Condos',
+  homeType: 'Condos',
   address: '638 Hollints Ct',
   city: 'Simi Valley',
   state: 'CA',
@@ -77,7 +77,7 @@ var listingsData = [{
   image: './img/house_5.jpg'
 }, {
   neighborhood: 'Los Angeles County',
-  houseType: 'Houses',
+  homeType: 'Houses',
   address: '854 Summit Dr',
   city: 'Downey',
   state: 'CA',
@@ -90,7 +90,7 @@ var listingsData = [{
   image: './img/house_6.jpg'
 }, {
   neighborhood: 'Orange County',
-  houseType: 'Townhomes',
+  homeType: 'Townhomes',
   address: '9821 Crossroads Blvd',
   city: 'Orange',
   state: 'CA',
@@ -103,7 +103,7 @@ var listingsData = [{
   image: './img/house_7.jpg'
 }, {
   neighborhood: 'Ventura County',
-  houseType: 'Houses',
+  homeType: 'Houses',
   address: '341 Bright Way',
   city: 'Oxnard',
   state: 'CA',
@@ -116,7 +116,7 @@ var listingsData = [{
   image: './img/house_8.jpg'
 }, {
   neighborhood: 'Los Angeles County',
-  houseType: 'Condos',
+  homeType: 'Condos',
   address: '536 Stormy St',
   city: 'Santa Monica',
   state: 'CA',
@@ -190,6 +190,10 @@ var App = function (_Component) {
     _this.state = {
       name: 'bern',
       listingsData: _listingsData2.default,
+      neighborhood: 'Los Angeles County',
+      homeType: 'Houses',
+      bedroom: 1,
+      bathroom: 1,
       min_price: 0,
       max_price: 10000000,
       min_squareFeet: 0,
@@ -342,7 +346,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'houseType', className: 'filters houseType', onChange: this.props.change },
+            { name: 'homeType', className: 'filters homeType', onChange: this.props.change },
             _react2.default.createElement(
               'option',
               { value: 'Houses' },

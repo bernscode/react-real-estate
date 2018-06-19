@@ -12,6 +12,10 @@ class App extends Component {
     this.state = {
       name: 'bern',
       listingsData,
+      neighborhood: 'Los Angeles County',
+      homeType: 'Houses',
+      bedroom: 1,
+      bathroom: 1,
       min_price: 0,
       max_price: 10000000,
       min_squareFeet: 0,

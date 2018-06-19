@@ -18,7 +18,7 @@ export default class Filter extends Component {
         <option value="Orange County">Orange County</option>
         <option value="Ventura County">Ventura County</option>
       </select>
-      <select name="houseType" className="filters houseType" onChange={this.props.change}>
+      <select name="homeType" className="filters homeType" onChange={this.props.change}>
         <option value="Houses">Houses</option>
         <option value="Condos">Condos</option>
         <option value="Townhomes">Townhomes</option>
