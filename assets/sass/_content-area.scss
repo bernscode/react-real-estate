@@ -59,6 +59,17 @@
       color: darkGrey;
     }
 
+    input[type="number"] {
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 5px;
+      width: 45%;
+      display: inline-block;
+      margin-right: 2.5%;
+      margin-bottom: 16px;
+    }
+
+    // this was used prior to changing input to type=number (above)
     input[type="text"] {
       border-radius: 5px;
       font-size: 14px;

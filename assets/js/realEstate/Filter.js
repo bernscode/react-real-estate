@@ -50,18 +50,18 @@ export default class Filter extends Component {
         {/* alternate input type to confirm numeric input */}
         {/* type="number" pattern="[0-9]*" inputmode="numeric" */}
 
-        <input type="text" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
-        <input type="text" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
       </div>
       <div className="filters squareFeet">
         <span className="title">Square Feet</span>
-        <input type="text" name="min_squareFeet" className="min-squareFeet" onChange={this.props.change} value={this.props.globalState.min_squareFeet} />
-        <input type="text" name="max_squareFeet" className="max-squareFeet" onChange={this.props.change} value={this.props.globalState.max_squareFeet} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="min_squareFeet" className="min-squareFeet" onChange={this.props.change} value={this.props.globalState.min_squareFeet} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="max_squareFeet" className="max-squareFeet" onChange={this.props.change} value={this.props.globalState.max_squareFeet} />
       </div>
       <div className="filters lotSize">
         <span className="title">Lot Size</span>
-        <input type="text" name="min_lotSize" className="min-lotSize" onChange={this.props.change} value={this.props.globalState.min_lotSize} />
-        <input type="text" name="max_lotSize" className="max-lotSize" onChange={this.props.change} value={this.props.globalState.max_lotSize} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="min_lotSize" className="min-lotSize" onChange={this.props.change} value={this.props.globalState.min_lotSize} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" name="max_lotSize" className="max-lotSize" onChange={this.props.change} value={this.props.globalState.max_lotSize} />
       </div>
       <div className="filters features">
         <span className="title">Features</span>

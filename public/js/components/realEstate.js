@@ -480,8 +480,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
-            _react2.default.createElement('input', { type: 'text', name: 'max_price', className: 'max-price', onChange: this.props.change, value: this.props.globalState.max_price })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_price', className: 'max-price', onChange: this.props.change, value: this.props.globalState.max_price })
           ),
           _react2.default.createElement(
             'div',
@@ -491,8 +491,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Square Feet'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min_squareFeet', className: 'min-squareFeet', onChange: this.props.change, value: this.props.globalState.min_squareFeet }),
-            _react2.default.createElement('input', { type: 'text', name: 'max_squareFeet', className: 'max-squareFeet', onChange: this.props.change, value: this.props.globalState.max_squareFeet })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_squareFeet', className: 'min-squareFeet', onChange: this.props.change, value: this.props.globalState.min_squareFeet }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_squareFeet', className: 'max-squareFeet', onChange: this.props.change, value: this.props.globalState.max_squareFeet })
           ),
           _react2.default.createElement(
             'div',
@@ -502,8 +502,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Lot Size'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min_lotSize', className: 'min-lotSize', onChange: this.props.change, value: this.props.globalState.min_lotSize }),
-            _react2.default.createElement('input', { type: 'text', name: 'max_lotSize', className: 'max-lotSize', onChange: this.props.change, value: this.props.globalState.max_lotSize })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_lotSize', className: 'min-lotSize', onChange: this.props.change, value: this.props.globalState.min_lotSize }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_lotSize', className: 'max-lotSize', onChange: this.props.change, value: this.props.globalState.max_lotSize })
           ),
           _react2.default.createElement(
             'div',
