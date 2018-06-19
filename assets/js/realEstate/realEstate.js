@@ -41,7 +41,7 @@ class App extends Component {
     this.setState({
       [name]: value
     }, () => {
-      console.log(this.state)
+      console.log(this.state.max_price)
 
       this.filteredData()
     })
@@ -52,11 +52,15 @@ class App extends Component {
   // method for filtering data
   filteredData() {
     var newData = this.state.listingsData.filter((item) => {
+
+
       return item.price >= this.state.min_price &&
       item.price <= this.state.max_price &&
       item.squareFeet >= this.state.min_squareFeet && item.squareFeet <= this.state.max_squareFeet &&
       item.lotSize >= this.state.min_lotSize &&
-      item.lotSize <= this.state.max_lotSize
+      item.lotSize <= this.state.max_lotSize &&
+      item.bedroom >= this.state.bedroom &&
+      item.bathroom >= this.state.bathroom
     })
 
     if(this.state.city != "all") {
@@ -64,6 +68,14 @@ class App extends Component {
         return item.city == this.state.city
       })
     }
+
+    if(this.state.homeType != "all") {
+      newData = newData.filter((item) => {
+        return item.homeType == this.state.homeType
+      })
+    }
+
+
 
 
     this.setState({

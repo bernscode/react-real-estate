@@ -1,2 +1,2 @@
 # react-real-estate
-React real estate project
+React & Redux real estate project

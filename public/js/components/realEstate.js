@@ -215,7 +215,7 @@ var App = function (_Component) {
       var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
 
       this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this2.state);
+        console.log(_this2.state.max_price);
 
         _this2.filteredData();
       });
@@ -231,12 +231,19 @@ var App = function (_Component) {
       var _this3 = this;
 
       var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.squareFeet >= _this3.state.min_squareFeet && item.squareFeet <= _this3.state.max_squareFeet && item.lotSize >= _this3.state.min_lotSize && item.lotSize <= _this3.state.max_lotSize;
+
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.squareFeet >= _this3.state.min_squareFeet && item.squareFeet <= _this3.state.max_squareFeet && item.lotSize >= _this3.state.min_lotSize && item.lotSize <= _this3.state.max_lotSize && item.bedroom >= _this3.state.bedroom && item.bathroom >= _this3.state.bathroom;
       });
 
       if (this.state.city != "all") {
         newData = newData.filter(function (item) {
           return item.city == _this3.state.city;
+        });
+      }
+
+      if (this.state.homeType != "all") {
+        newData = newData.filter(function (item) {
+          return item.homeType == _this3.state.homeType;
         });
       }
 
@@ -328,7 +335,7 @@ var Filter = function (_Component) {
             _react2.default.createElement(
               'option',
               { value: 'all' },
-              'All'
+              'All Cities'
             ),
             _react2.default.createElement(
               'option',
@@ -367,7 +374,7 @@ var Filter = function (_Component) {
             _react2.default.createElement(
               'option',
               { value: 'all' },
-              'All Homes'
+              'All Home Types'
             ),
             _react2.default.createElement(
               'option',

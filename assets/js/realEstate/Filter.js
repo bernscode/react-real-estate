@@ -14,7 +14,7 @@ export default class Filter extends Component {
       <h4>Filter</h4>
     {/* setup change() */}
     <select name="city" className="filters city" onChange={this.props.change}>
-        <option value="all">All</option>
+        <option value="all">All Cities</option>
         <option value="Beverly Hills">Beverly Hills</option>
         <option value="Brentwood">Brentwood</option>
         <option value="Downey">Downey</option>
@@ -23,7 +23,7 @@ export default class Filter extends Component {
         <option value="Santa Monica">Santa Monica</option>
       </select>
       <select name="homeType" className="filters homeType" onChange={this.props.change}>
-        <option value="all">All Homes</option>
+        <option value="all">All Home Types</option>
         <option value="Houses">Houses</option>
         <option value="Condos">Condos</option>
         <option value="Townhomes">Townhomes</option>
@@ -51,8 +51,8 @@ export default class Filter extends Component {
       </div>
       <div className="filters squareFeet">
         <span className="title">Square Feet</span>
-      <input type="text" name="min_squareFeet" className="min-squareFeet" onChange={this.props.change} value={this.props.globalState.min_squareFeet} />
-    <input type="text" name="max_squareFeet" className="max-squareFeet" onChange={this.props.change} value={this.props.globalState.max_squareFeet} />
+        <input type="text" name="min_squareFeet" className="min-squareFeet" onChange={this.props.change} value={this.props.globalState.min_squareFeet} />
+        <input type="text" name="max_squareFeet" className="max-squareFeet" onChange={this.props.change} value={this.props.globalState.max_squareFeet} />
       </div>
       <div className="filters lotSize">
         <span className="title">Lot Size</span>
