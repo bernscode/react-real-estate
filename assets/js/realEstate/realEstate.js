@@ -41,13 +41,18 @@ class App extends Component {
     this.setState({
       [name]: value
     }, () => {
-      console.log(this.state.max_price)
+      console.log(this.state.min_price)
+
+      // call method to check input limits
+      // this.checkInputLimits()
 
       this.filteredData()
     })
     // test for target value
     // console.log(event.target.value)
   }
+
+
 
   // method for filtering data
   filteredData() {
@@ -76,12 +81,18 @@ class App extends Component {
     }
 
 
-
-
     this.setState({
       filteredData: newData
     })
   }
+
+  // method to validate user input
+  // checkInputLimits() {
+  //   if(this.state.min_price < 0) {
+  //     alert("Please enter a value greater than 0")
+  //   }
+  // }
+
 
   render () {
     return (<div className="whole-screen">

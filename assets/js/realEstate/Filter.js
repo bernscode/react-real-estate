@@ -46,8 +46,12 @@ export default class Filter extends Component {
       </select>
       <div className="filters price" onChange={this.props.change}>
         <span className="title">Price</span>
-      <input type="text" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
-    <input type="text" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
+
+        {/* alternate input type to confirm numeric input */}
+        {/* type="number" pattern="[0-9]*" inputmode="numeric" */}
+
+        <input type="text" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
+        <input type="text" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
       </div>
       <div className="filters squareFeet">
         <span className="title">Square Feet</span>

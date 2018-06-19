@@ -215,7 +215,10 @@ var App = function (_Component) {
       var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
 
       this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this2.state.max_price);
+        console.log(_this2.state.min_price);
+
+        // call method to check input limits
+        // this.checkInputLimits()
 
         _this2.filteredData();
       });
@@ -251,6 +254,15 @@ var App = function (_Component) {
         filteredData: newData
       });
     }
+
+    // method to validate user input
+    // checkInputLimits() {
+    //   if(this.state.min_price < 0) {
+    //     alert("Please enter a value greater than 0")
+    //   }
+    // }
+
+
   }, {
     key: 'render',
     value: function render() {

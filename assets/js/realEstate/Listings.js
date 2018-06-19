@@ -10,6 +10,7 @@ export default class Listings extends Component {
     this.loopListings = this.loopListings.bind(this)
   }
 
+
   loopListings () {
 
     // alternate syntax for declaring variable
