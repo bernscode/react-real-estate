@@ -12,10 +12,10 @@ class App extends Component {
     this.state = {
       name: 'bern',
       listingsData,
-      neighborhood: 'Los Angeles County',
-      homeType: 'Houses',
-      bedroom: 1,
-      bathroom: 1,
+      city: 'all',
+      homeType: 'all',
+      bedroom: 0,
+      bathroom: 0,
       min_price: 0,
       max_price: 10000000,
       min_squareFeet: 0,
@@ -58,6 +58,13 @@ class App extends Component {
       item.lotSize >= this.state.min_lotSize &&
       item.lotSize <= this.state.max_lotSize
     })
+
+    if(this.state.city != "all") {
+      newData = newData.filter((item) => {
+        return item.city == this.state.city
+      })
+    }
+
 
     this.setState({
       filteredData: newData

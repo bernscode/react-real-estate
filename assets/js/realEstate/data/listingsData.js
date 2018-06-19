@@ -1,6 +1,5 @@
 var listingsData = [
   {
-    neighborhood: 'Los Angeles County',
     homeType: 'Houses',
     address: '6231 Hacienda Pl',
     city: 'Hollywood',
@@ -19,10 +18,9 @@ var listingsData = [
 
   },
   {
-    neighborhood: 'Orange County',
     homeType: 'Condos',
     address: '511 Clark Way',
-    city: 'Anaheim',
+    city: 'Malibu',
     state: 'CA',
     bedroom: 3,
     bathroom: 2,
@@ -36,10 +34,9 @@ var listingsData = [
     image: './img/house_2.jpg'
   },
   {
-    neighborhood: 'Los Angeles County',
     homeType: 'Townhomes',
     address: '745 Granada Ave',
-    city: 'Alhambra',
+    city: 'Brentwood',
     state: 'CA',
     bedroom: 3,
     bathroom: 3,
@@ -53,10 +50,9 @@ var listingsData = [
     image: './img/house_3.jpg'
   },
   {
-    neighborhood: 'Orange County',
     homeType: 'Houses',
     address: '2113 Park Pl',
-    city: 'Irvine',
+    city: 'Hollywood',
     state: 'CA',
     bedroom: 4,
     bathroom: 4,
@@ -71,10 +67,9 @@ var listingsData = [
     image: './img/house_4.jpg'
   },
   {
-    neighborhood: 'Ventura County',
     homeType: 'Condos',
     address: '638 Hollints Ct',
-    city: 'Simi Valley',
+    city: 'Downey',
     state: 'CA',
     bedroom: 2,
     bathroom: 2,
@@ -88,10 +83,9 @@ var listingsData = [
     image: './img/house_5.jpg'
   },
   {
-    neighborhood: 'Los Angeles County',
     homeType: 'Houses',
     address: '854 Summit Dr',
-    city: 'Downey',
+    city: 'Beverly Hills',
     state: 'CA',
     bedroom: 4,
     bathroom: 3,
@@ -107,10 +101,9 @@ var listingsData = [
     image: './img/house_6.jpg'
   },
   {
-    neighborhood: 'Orange County',
     homeType: 'Townhomes',
     address: '9821 Crossroads Blvd',
-    city: 'Orange',
+    city: 'Malibu',
     state: 'CA',
     bedroom: 3,
     bathroom: 2,
@@ -124,10 +117,9 @@ var listingsData = [
     image: './img/house_7.jpg'
   },
   {
-    neighborhood: 'Ventura County',
     homeType: 'Houses',
     address: '341 Bright Way',
-    city: 'Oxnard',
+    city: 'Brentwood',
     state: 'CA',
     bedroom: 3,
     bathroom: 2,
@@ -142,7 +134,6 @@ var listingsData = [
     image: './img/house_8.jpg'
   },
   {
-    neighborhood: 'Los Angeles County',
     homeType: 'Condos',
     address: '536 Stormy St',
     city: 'Santa Monica',

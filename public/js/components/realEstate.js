@@ -10,7 +10,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var listingsData = [{
-  neighborhood: 'Los Angeles County',
   homeType: 'Houses',
   address: '6231 Hacienda Pl',
   city: 'Hollywood',
@@ -24,10 +23,9 @@ var listingsData = [{
   image: './img/house_1.jpg'
 
 }, {
-  neighborhood: 'Orange County',
   homeType: 'Condos',
   address: '511 Clark Way',
-  city: 'Anaheim',
+  city: 'Malibu',
   state: 'CA',
   bedroom: 3,
   bathroom: 2,
@@ -37,10 +35,9 @@ var listingsData = [{
   features: ['Garage', 'Fireplace'],
   image: './img/house_2.jpg'
 }, {
-  neighborhood: 'Los Angeles County',
   homeType: 'Townhomes',
   address: '745 Granada Ave',
-  city: 'Alhambra',
+  city: 'Brentwood',
   state: 'CA',
   bedroom: 3,
   bathroom: 3,
@@ -50,10 +47,9 @@ var listingsData = [{
   features: ['Garage', 'Swimming Pool'],
   image: './img/house_3.jpg'
 }, {
-  neighborhood: 'Orange County',
   homeType: 'Houses',
   address: '2113 Park Pl',
-  city: 'Irvine',
+  city: 'Hollywood',
   state: 'CA',
   bedroom: 4,
   bathroom: 4,
@@ -63,10 +59,9 @@ var listingsData = [{
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
   image: './img/house_4.jpg'
 }, {
-  neighborhood: 'Ventura County',
   homeType: 'Condos',
   address: '638 Hollints Ct',
-  city: 'Simi Valley',
+  city: 'Downey',
   state: 'CA',
   bedroom: 2,
   bathroom: 2,
@@ -76,10 +71,9 @@ var listingsData = [{
   features: ['Garage', 'Fireplace'],
   image: './img/house_5.jpg'
 }, {
-  neighborhood: 'Los Angeles County',
   homeType: 'Houses',
   address: '854 Summit Dr',
-  city: 'Downey',
+  city: 'Beverly Hills',
   state: 'CA',
   bedroom: 4,
   bathroom: 3,
@@ -89,10 +83,9 @@ var listingsData = [{
   features: ['Garage', 'Swimming Pool', 'Fireplace', 'Guest House'],
   image: './img/house_6.jpg'
 }, {
-  neighborhood: 'Orange County',
   homeType: 'Townhomes',
   address: '9821 Crossroads Blvd',
-  city: 'Orange',
+  city: 'Malibu',
   state: 'CA',
   bedroom: 3,
   bathroom: 2,
@@ -102,10 +95,9 @@ var listingsData = [{
   features: ['Garage', 'Swimming Pool'],
   image: './img/house_7.jpg'
 }, {
-  neighborhood: 'Ventura County',
   homeType: 'Houses',
   address: '341 Bright Way',
-  city: 'Oxnard',
+  city: 'Brentwood',
   state: 'CA',
   bedroom: 3,
   bathroom: 2,
@@ -115,7 +107,6 @@ var listingsData = [{
   features: ['Garage', 'Swimming Pool', 'Fireplace'],
   image: './img/house_8.jpg'
 }, {
-  neighborhood: 'Los Angeles County',
   homeType: 'Condos',
   address: '536 Stormy St',
   city: 'Santa Monica',
@@ -190,10 +181,10 @@ var App = function (_Component) {
     _this.state = {
       name: 'bern',
       listingsData: _listingsData2.default,
-      neighborhood: 'Los Angeles County',
-      homeType: 'Houses',
-      bedroom: 1,
-      bathroom: 1,
+      city: 'all',
+      homeType: 'all',
+      bedroom: 0,
+      bathroom: 0,
       min_price: 0,
       max_price: 10000000,
       min_squareFeet: 0,
@@ -242,6 +233,12 @@ var App = function (_Component) {
       var newData = this.state.listingsData.filter(function (item) {
         return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.squareFeet >= _this3.state.min_squareFeet && item.squareFeet <= _this3.state.max_squareFeet && item.lotSize >= _this3.state.min_lotSize && item.lotSize <= _this3.state.max_lotSize;
       });
+
+      if (this.state.city != "all") {
+        newData = newData.filter(function (item) {
+          return item.city == _this3.state.city;
+        });
+      }
 
       this.setState({
         filteredData: newData
@@ -327,26 +324,51 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'neighborhood', className: 'filters neighborhood', onChange: this.props.change },
+            { name: 'city', className: 'filters city', onChange: this.props.change },
             _react2.default.createElement(
               'option',
-              { value: 'Los Angeles County' },
-              'Los Angeles County'
+              { value: 'all' },
+              'All'
             ),
             _react2.default.createElement(
               'option',
-              { value: 'Orange County' },
-              'Orange County'
+              { value: 'Beverly Hills' },
+              'Beverly Hills'
             ),
             _react2.default.createElement(
               'option',
-              { value: 'Ventura County' },
-              'Ventura County'
+              { value: 'Brentwood' },
+              'Brentwood'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Downey' },
+              'Downey'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Hollywood' },
+              'Hollywood'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Malibu' },
+              'Malibu'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Santa Monica' },
+              'Santa Monica'
             )
           ),
           _react2.default.createElement(
             'select',
             { name: 'homeType', className: 'filters homeType', onChange: this.props.change },
+            _react2.default.createElement(
+              'option',
+              { value: 'all' },
+              'All Homes'
+            ),
             _react2.default.createElement(
               'option',
               { value: 'Houses' },
@@ -378,18 +400,23 @@ var Filter = function (_Component) {
             { name: 'bedroom', className: 'filters bedroom', onChange: this.props.change },
             _react2.default.createElement(
               'option',
+              { value: '0' },
+              '0+ Bedrooms'
+            ),
+            _react2.default.createElement(
+              'option',
               { value: '1' },
-              '1 Bedroom'
+              '1+ Bedroom'
             ),
             _react2.default.createElement(
               'option',
               { value: '2' },
-              '2 Bedrooms'
+              '2+ Bedrooms'
             ),
             _react2.default.createElement(
               'option',
               { value: '3' },
-              '3 Bedrooms'
+              '3+ Bedrooms'
             ),
             _react2.default.createElement(
               'option',
@@ -402,18 +429,23 @@ var Filter = function (_Component) {
             { name: 'bathroom', className: 'filters bathroom', onChange: this.props.change },
             _react2.default.createElement(
               'option',
+              { value: '0' },
+              '0+ Bathrooms'
+            ),
+            _react2.default.createElement(
+              'option',
               { value: '1' },
-              '1 Bathroom'
+              '1+ Bathroom'
             ),
             _react2.default.createElement(
               'option',
               { value: '2' },
-              '2 Bathrooms'
+              '2+ Bathrooms'
             ),
             _react2.default.createElement(
               'option',
               { value: '3' },
-              '3 Bathrooms'
+              '3+ Bathrooms'
             ),
             _react2.default.createElement(
               'option',
