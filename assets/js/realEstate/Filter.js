@@ -20,7 +20,7 @@ export default class Filter extends Component {
       // means var = this.props.globalState.populateFormsData.cities
       var { cities } = this.props.globalState.populateFormsData
 
-      console.log(cities)
+      // console.log(cities)
 
       return cities.map((item) => {
         return(
@@ -32,15 +32,48 @@ export default class Filter extends Component {
   }
 
   homeTypes() {
+    if(this.props.globalState.populateFormsData.homeTypes != undefined) {
+      // means var = this.props.globalState.populateFormsData.homeTypes
+      var { homeTypes } = this.props.globalState.populateFormsData
 
+      // console.log(homeTypes)
+
+      return homeTypes.map((item) => {
+        return(
+        <option key={item} value={item}>{item}</option>
+        )
+      })
+    }
   }
 
   bedrooms() {
+    if(this.props.globalState.populateFormsData.bedrooms != undefined) {
+      // means var = this.props.globalState.populateFormsData.bedrooms
+      var { bedrooms } = this.props.globalState.populateFormsData
 
+      // console.log(bedrooms)
+
+      return bedrooms.map((item) => {
+        return(
+        <option key={item} value={item}>{item}</option>
+        )
+      })
+    }
   }
 
   bathrooms() {
+    if(this.props.globalState.populateFormsData.bathrooms != undefined) {
+      // means var = this.props.globalState.populateFormsData.cities
+      var { bathrooms } = this.props.globalState.populateFormsData
 
+      // console.log(bathrooms)
+
+      return bathrooms.map((item) => {
+        return(
+        <option key={item} value={item}>{item}</option>
+        )
+      })
+    }
   }
 
 
@@ -55,25 +88,15 @@ export default class Filter extends Component {
       </select>
       <select name="homeType" className="filters homeType" onChange={this.props.change}>
         <option value="all">All Home Types</option>
-        <option value="Houses">Houses</option>
-        <option value="Condos">Condos</option>
-        <option value="Townhomes">Townhomes</option>
-        <option value="Manufacured">Manufacured</option>
-        <option value="Lots / Land">Lots / Land</option>
+        {this.homeTypes()}
       </select>
       <select name="bedroom" className="filters bedroom" onChange={this.props.change}>
         <option value="0">0+ Bedrooms</option>
-        <option value="1">1+ Bedroom</option>
-        <option value="2">2+ Bedrooms</option>
-        <option value="3">3+ Bedrooms</option>
-        <option value="4">4+ Bedrooms</option>
+        {this.bedrooms()}
       </select>
       <select name="bathroom" className="filters bathroom" onChange={this.props.change}>
         <option value="0">0+ Bathrooms</option>
-        <option value="1">1+ Bathroom</option>
-        <option value="2">2+ Bathrooms</option>
-        <option value="3">3+ Bathrooms</option>
-        <option value="4">4+ Bathrooms</option>
+        {this.bathrooms()}
       </select>
       <div className="filters price" onChange={this.props.change}>
         <span className="title">Price</span>

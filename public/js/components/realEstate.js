@@ -389,8 +389,7 @@ var Filter = function (_Component) {
         // means var = this.props.globalState.populateFormsData.cities
         var cities = this.props.globalState.populateFormsData.cities;
 
-
-        console.log(cities);
+        // console.log(cities)
 
         return cities.map(function (item) {
           return _react2.default.createElement(
@@ -403,13 +402,58 @@ var Filter = function (_Component) {
     }
   }, {
     key: 'homeTypes',
-    value: function homeTypes() {}
+    value: function homeTypes() {
+      if (this.props.globalState.populateFormsData.homeTypes != undefined) {
+        // means var = this.props.globalState.populateFormsData.homeTypes
+        var homeTypes = this.props.globalState.populateFormsData.homeTypes;
+
+        // console.log(homeTypes)
+
+        return homeTypes.map(function (item) {
+          return _react2.default.createElement(
+            'option',
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
   }, {
     key: 'bedrooms',
-    value: function bedrooms() {}
+    value: function bedrooms() {
+      if (this.props.globalState.populateFormsData.bedrooms != undefined) {
+        // means var = this.props.globalState.populateFormsData.bedrooms
+        var bedrooms = this.props.globalState.populateFormsData.bedrooms;
+
+        // console.log(bedrooms)
+
+        return bedrooms.map(function (item) {
+          return _react2.default.createElement(
+            'option',
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
   }, {
     key: 'bathrooms',
-    value: function bathrooms() {}
+    value: function bathrooms() {
+      if (this.props.globalState.populateFormsData.bathrooms != undefined) {
+        // means var = this.props.globalState.populateFormsData.cities
+        var bathrooms = this.props.globalState.populateFormsData.bathrooms;
+
+        // console.log(bathrooms)
+
+        return bathrooms.map(function (item) {
+          return _react2.default.createElement(
+            'option',
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
   }, {
     key: 'render',
     value: function render() {
@@ -442,31 +486,7 @@ var Filter = function (_Component) {
               { value: 'all' },
               'All Home Types'
             ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Houses' },
-              'Houses'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Condos' },
-              'Condos'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Townhomes' },
-              'Townhomes'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Manufacured' },
-              'Manufacured'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Lots / Land' },
-              'Lots / Land'
-            )
+            this.homeTypes()
           ),
           _react2.default.createElement(
             'select',
@@ -476,26 +496,7 @@ var Filter = function (_Component) {
               { value: '0' },
               '0+ Bedrooms'
             ),
-            _react2.default.createElement(
-              'option',
-              { value: '1' },
-              '1+ Bedroom'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '2' },
-              '2+ Bedrooms'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '3' },
-              '3+ Bedrooms'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '4' },
-              '4+ Bedrooms'
-            )
+            this.bedrooms()
           ),
           _react2.default.createElement(
             'select',
@@ -505,26 +506,7 @@ var Filter = function (_Component) {
               { value: '0' },
               '0+ Bathrooms'
             ),
-            _react2.default.createElement(
-              'option',
-              { value: '1' },
-              '1+ Bathroom'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '2' },
-              '2+ Bathrooms'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '3' },
-              '3+ Bathrooms'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: '4' },
-              '4+ Bathrooms'
-            )
+            this.bathrooms()
           ),
           _react2.default.createElement(
             'div',
