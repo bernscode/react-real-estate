@@ -373,6 +373,7 @@ var Filter = function (_Component) {
     _this.state = {
       name: 'bern'
     };
+    _this.cities = _this.cities.bind(_this);
     return _this;
   }
 
@@ -381,6 +382,34 @@ var Filter = function (_Component) {
     value: function componentWillMount() {
       this.props.populateAction();
     }
+  }, {
+    key: 'cities',
+    value: function cities() {
+      if (this.props.globalState.populateFormsData.cities != undefined) {
+        // means var = this.props.globalState.populateFormsData.cities
+        var cities = this.props.globalState.populateFormsData.cities;
+
+
+        console.log(cities);
+
+        return cities.map(function (item) {
+          return _react2.default.createElement(
+            'option',
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
+    key: 'homeTypes',
+    value: function homeTypes() {}
+  }, {
+    key: 'bedrooms',
+    value: function bedrooms() {}
+  }, {
+    key: 'bathrooms',
+    value: function bathrooms() {}
   }, {
     key: 'render',
     value: function render() {
@@ -403,36 +432,7 @@ var Filter = function (_Component) {
               { value: 'all' },
               'All Cities'
             ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Beverly Hills' },
-              'Beverly Hills'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Brentwood' },
-              'Brentwood'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Downey' },
-              'Downey'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Hollywood' },
-              'Hollywood'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Malibu' },
-              'Malibu'
-            ),
-            _react2.default.createElement(
-              'option',
-              { value: 'Santa Monica' },
-              'Santa Monica'
-            )
+            this.cities()
           ),
           _react2.default.createElement(
             'select',
@@ -534,8 +534,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', min: '0', max: '1000000', step: '100000', maxlength: '8', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_price', className: 'max-price', onChange: this.props.change, value: this.props.globalState.max_price })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '1000000', step: '100000', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '1000000', step: '100000', name: 'max_price', className: 'max-price', onChange: this.props.change, value: this.props.globalState.max_price })
           ),
           _react2.default.createElement(
             'div',
@@ -545,8 +545,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Square Feet'
             ),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_squareFeet', className: 'min-squareFeet', onChange: this.props.change, value: this.props.globalState.min_squareFeet }),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_squareFeet', className: 'max-squareFeet', onChange: this.props.change, value: this.props.globalState.max_squareFeet })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '10000', step: '100', name: 'min_squareFeet', className: 'min-squareFeet', onChange: this.props.change, value: this.props.globalState.min_squareFeet }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '10000', step: '100', name: 'max_squareFeet', className: 'max-squareFeet', onChange: this.props.change, value: this.props.globalState.max_squareFeet })
           ),
           _react2.default.createElement(
             'div',
@@ -556,8 +556,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Lot Size'
             ),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_lotSize', className: 'min-lotSize', onChange: this.props.change, value: this.props.globalState.min_lotSize }),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_lotSize', className: 'max-lotSize', onChange: this.props.change, value: this.props.globalState.max_lotSize })
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '50000', step: '1000', name: 'min_lotSize', className: 'min-lotSize', onChange: this.props.change, value: this.props.globalState.min_lotSize }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputMode: 'numeric', min: '0', max: '50000', step: '1000', name: 'max_lotSize', className: 'max-lotSize', onChange: this.props.change, value: this.props.globalState.max_lotSize })
           ),
           _react2.default.createElement(
             'div',
