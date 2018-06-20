@@ -8,6 +8,9 @@ export default class Filter extends Component {
       name: 'bern'
     }
     this.cities = this.cities.bind(this)
+    this.homeTypes = this.homeTypes.bind(this)
+    this.bedrooms = this.bedrooms.bind(this)
+    this.bathrooms = this.bathrooms.bind(this)
   }
 
   componentWillMount(){
@@ -55,7 +58,7 @@ export default class Filter extends Component {
 
       return bedrooms.map((item) => {
         return(
-        <option key={item} value={item}>{item}</option>
+        <option key={item} value={item}>{item}+ Bedrooms</option>
         )
       })
     }
@@ -70,7 +73,7 @@ export default class Filter extends Component {
 
       return bathrooms.map((item) => {
         return(
-        <option key={item} value={item}>{item}</option>
+        <option key={item} value={item}>{item}+ Bathrooms</option>
         )
       })
     }

@@ -374,6 +374,9 @@ var Filter = function (_Component) {
       name: 'bern'
     };
     _this.cities = _this.cities.bind(_this);
+    _this.homeTypes = _this.homeTypes.bind(_this);
+    _this.bedrooms = _this.bedrooms.bind(_this);
+    _this.bathrooms = _this.bathrooms.bind(_this);
     return _this;
   }
 
@@ -431,7 +434,8 @@ var Filter = function (_Component) {
           return _react2.default.createElement(
             'option',
             { key: item, value: item },
-            item
+            item,
+            '+ Bedrooms'
           );
         });
       }
@@ -449,7 +453,8 @@ var Filter = function (_Component) {
           return _react2.default.createElement(
             'option',
             { key: item, value: item },
-            item
+            item,
+            '+ Bathrooms'
           );
         });
       }
