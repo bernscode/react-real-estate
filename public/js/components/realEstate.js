@@ -207,10 +207,22 @@ var App = function (_Component) {
     return _this;
   }
 
-  // method for filter
-
-
   _createClass(App, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+
+      var listingsData = this.state.listingsData.sort(function (a, b) {
+        return a.price - b.price;
+      });
+
+      this.setState({
+        listingsData: listingsData
+      });
+    }
+
+    // method for filter
+
+  }, {
     key: 'change',
     value: function change(event) {
       var _this2 = this;
