@@ -27,7 +27,8 @@ class App extends Component {
       Guest_House: false,
       Swimming_Pool: false,
       filteredData: listingsData,
-      populateFormsData: ''
+      populateFormsData: '',
+      sort_by: 'price-dsc'
     }
 
     this.change = this.change.bind(this)
@@ -91,6 +92,18 @@ class App extends Component {
     if(this.state.homeType != "all") {
       newData = newData.filter((item) => {
         return item.homeType == this.state.homeType
+      })
+    }
+
+    if(this.state.sort_by == 'price-dsc') {
+      newData = newData.sort((a, b) => {
+        return a.price - b.price
+      })
+    }
+
+    if(this.state.sort_by == 'price-asc') {
+      newData = newData.sort((a, b) => {
+        return b.price - a.price
       })
     }
 
@@ -171,7 +184,7 @@ class App extends Component {
       <Header />
     <section id="content-area">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
-      <Listings listingsData={this.state.filteredData} />
+      <Listings listingsData={this.state.filteredData} change={this.change}/>
       </section>
       </div>)
   }
