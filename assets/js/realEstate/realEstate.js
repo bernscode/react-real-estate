@@ -105,12 +105,19 @@ class App extends Component {
     // spread operator array
     cities = [...cities]
 
+    // sort the data
+    cities = cities.sort()
+
+
     // homeType
     var homeTypes = this.state.listingsData.map((item) => {
       return item.homeType
     })
     homeTypes = new Set(homeTypes)
     homeTypes = [...homeTypes]
+
+    // sort the data
+    homeTypes = homeTypes.sort()
 
 
     // bedroom
@@ -120,12 +127,18 @@ class App extends Component {
     bedrooms = new Set(bedrooms)
     bedrooms = [...bedrooms]
 
+    // sort the data
+    bedrooms = bedrooms.sort()
+
     // bathroom
     var bathrooms = this.state.listingsData.map((item) => {
       return item.bathroom
     })
     bathrooms = new Set(bathrooms)
     bathrooms = [...bathrooms]
+
+    // sort the data
+    bathrooms = bathrooms.sort()
 
 
     this.setState({

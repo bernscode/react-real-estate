@@ -280,12 +280,18 @@ var App = function (_Component) {
       // spread operator array
       cities = [].concat(_toConsumableArray(cities));
 
+      // sort the data
+      cities = cities.sort();
+
       // homeType
       var homeTypes = this.state.listingsData.map(function (item) {
         return item.homeType;
       });
       homeTypes = new Set(homeTypes);
       homeTypes = [].concat(_toConsumableArray(homeTypes));
+
+      // sort the data
+      homeTypes = homeTypes.sort();
 
       // bedroom
       var bedrooms = this.state.listingsData.map(function (item) {
@@ -294,12 +300,18 @@ var App = function (_Component) {
       bedrooms = new Set(bedrooms);
       bedrooms = [].concat(_toConsumableArray(bedrooms));
 
+      // sort the data
+      bedrooms = bedrooms.sort();
+
       // bathroom
       var bathrooms = this.state.listingsData.map(function (item) {
         return item.bathroom;
       });
       bathrooms = new Set(bathrooms);
       bathrooms = [].concat(_toConsumableArray(bathrooms));
+
+      // sort the data
+      bathrooms = bathrooms.sort();
 
       this.setState({
         populateFormsData: {
