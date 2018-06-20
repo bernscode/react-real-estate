@@ -270,6 +270,8 @@ var App = function (_Component) {
   }, {
     key: 'populateForms',
     value: function populateForms() {
+      var _this4 = this;
+
       // city
       var cities = this.state.listingsData.map(function (item) {
         return item.city;
@@ -306,6 +308,8 @@ var App = function (_Component) {
           bedrooms: bedrooms,
           bathrooms: bathrooms
         }
+      }, function () {
+        console.log(_this4.state);
       });
     }
   }, {
@@ -373,6 +377,11 @@ var Filter = function (_Component) {
   }
 
   _createClass(Filter, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.populateAction();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(

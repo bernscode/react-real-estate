@@ -8,6 +8,11 @@ export default class Filter extends Component {
       name: 'bern'
     }
   }
+
+  componentWillMount(){
+    this.props.populateAction()
+  }
+
   render () {
     return (<section id="filter">
     <div className="inside">

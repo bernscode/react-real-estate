@@ -135,6 +135,8 @@ class App extends Component {
         bedrooms,
         bathrooms
       }
+    }, () => {
+      console.log(this.state)
     })
   }
 
