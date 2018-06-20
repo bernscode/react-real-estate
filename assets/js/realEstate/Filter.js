@@ -50,7 +50,7 @@ export default class Filter extends Component {
         {/* alternate input type to confirm numeric input */}
         {/* type="number" pattern="[0-9]*" inputmode="numeric" */}
 
-        <input type="number" pattern="[0-9]*" inputmode="numeric" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" max="1000000" step="100000" maxlength="8" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price} />
         <input type="number" pattern="[0-9]*" inputmode="numeric" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price} />
       </div>
       <div className="filters squareFeet">

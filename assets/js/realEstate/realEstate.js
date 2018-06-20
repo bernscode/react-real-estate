@@ -26,11 +26,13 @@ class App extends Component {
       Garage: false,
       Guest_House: false,
       Swimming_Pool: false,
-      filteredData: listingsData
+      filteredData: listingsData,
+      populateFormsData: ''
     }
 
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
+    this.populateForms = this.populateForms.bind(this)
   }
 
   // method for filter
@@ -94,11 +96,54 @@ class App extends Component {
   // }
 
 
+  populateForms() {
+    // city
+    var cities = this.state.listingsData.map((item) => {
+      return item.city
+    })
+    cities = new Set(cities)
+    // spread operator array
+    cities = [...cities]
+
+    // homeType
+    var homeTypes = this.state.listingsData.map((item) => {
+      return item.homeType
+    })
+    homeTypes = new Set(homeTypes)
+    homeTypes = [...homeTypes]
+
+
+    // bedroom
+    var bedrooms = this.state.listingsData.map((item) => {
+      return item.bedroom
+    })
+    bedrooms = new Set(bedrooms)
+    bedrooms = [...bedrooms]
+
+    // bathroom
+    var bathrooms = this.state.listingsData.map((item) => {
+      return item.bathroom
+    })
+    bathrooms = new Set(bathrooms)
+    bathrooms = [...bathrooms]
+
+
+    this.setState({
+      populateFormsData: {
+        cities,
+        homeTypes,
+        bedrooms,
+        bathrooms
+      }
+    })
+  }
+
+
   render () {
     return (<div className="whole-screen">
       <Header />
     <section id="content-area">
-        <Filter change={this.change} globalState={this.state} />
+        <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
       <Listings listingsData={this.state.filteredData} />
       </section>
       </div>)

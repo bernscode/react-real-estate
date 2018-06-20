@@ -160,6 +160,8 @@ var _listingsData2 = _interopRequireDefault(_listingsData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -195,11 +197,13 @@ var App = function (_Component) {
       Garage: false,
       Guest_House: false,
       Swimming_Pool: false,
-      filteredData: _listingsData2.default
+      filteredData: _listingsData2.default,
+      populateFormsData: ''
     };
 
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
+    _this.populateForms = _this.populateForms.bind(_this);
     return _this;
   }
 
@@ -264,6 +268,47 @@ var App = function (_Component) {
 
 
   }, {
+    key: 'populateForms',
+    value: function populateForms() {
+      // city
+      var cities = this.state.listingsData.map(function (item) {
+        return item.city;
+      });
+      cities = new Set(cities);
+      // spread operator array
+      cities = [].concat(_toConsumableArray(cities));
+
+      // homeType
+      var homeTypes = this.state.listingsData.map(function (item) {
+        return item.homeType;
+      });
+      homeTypes = new Set(homeTypes);
+      homeTypes = [].concat(_toConsumableArray(homeTypes));
+
+      // bedroom
+      var bedrooms = this.state.listingsData.map(function (item) {
+        return item.bedroom;
+      });
+      bedrooms = new Set(bedrooms);
+      bedrooms = [].concat(_toConsumableArray(bedrooms));
+
+      // bathroom
+      var bathrooms = this.state.listingsData.map(function (item) {
+        return item.bathroom;
+      });
+      bathrooms = new Set(bathrooms);
+      bathrooms = [].concat(_toConsumableArray(bathrooms));
+
+      this.setState({
+        populateFormsData: {
+          cities: cities,
+          homeTypes: homeTypes,
+          bedrooms: bedrooms,
+          bathrooms: bathrooms
+        }
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -273,7 +318,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           'section',
           { id: 'content-area' },
-          _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
+          _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForms }),
           _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
@@ -480,7 +525,7 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
+            _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', min: '0', max: '1000000', step: '100000', maxlength: '8', name: 'min_price', className: 'min-price', onChange: this.props.change, value: this.props.globalState.min_price }),
             _react2.default.createElement('input', { type: 'number', pattern: '[0-9]*', inputmode: 'numeric', name: 'max_price', className: 'max-price', onChange: this.props.change, value: this.props.globalState.max_price })
           ),
           _react2.default.createElement(
