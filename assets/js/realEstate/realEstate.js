@@ -29,7 +29,7 @@ class App extends Component {
       filteredData: listingsData,
       populateFormsData: '',
       sort_by: 'price-dsc',
-      view: 'long'
+      view: 'box'
     }
 
     this.change = this.change.bind(this)

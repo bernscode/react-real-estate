@@ -31,7 +31,7 @@ export default class Listings extends Component {
       if(this.props.globalState.view == 'box') {
 
           // THIS IS THE Box VIEW
-          return (<div className="col-md-3-listing" key={index}>
+          return (<div className="col-md-3-listing col-md-4" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
               <span className="address">{listing.address}</span>

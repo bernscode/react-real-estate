@@ -200,7 +200,7 @@ var App = function (_Component) {
       filteredData: _listingsData2.default,
       populateFormsData: '',
       sort_by: 'price-dsc',
-      view: 'long'
+      view: 'box'
     };
 
     _this.change = _this.change.bind(_this);
@@ -797,7 +797,7 @@ var Listings = function (_Component) {
           // THIS IS THE Box VIEW
           return _react2.default.createElement(
             'div',
-            { className: 'col-md-3-listing', key: index },
+            { className: 'col-md-3-listing col-md-4', key: index },
             _react2.default.createElement(
               'div',
               { className: 'listing' },
