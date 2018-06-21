@@ -199,7 +199,8 @@ var App = function (_Component) {
       Swimming_Pool: false,
       filteredData: _listingsData2.default,
       populateFormsData: '',
-      sort_by: 'price-dsc'
+      sort_by: 'price-dsc',
+      view: 'box'
     };
 
     _this.change = _this.change.bind(_this);
@@ -360,7 +361,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForms }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, change: this.change })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, change: this.change, globalState: this.state })
         )
       );
     }

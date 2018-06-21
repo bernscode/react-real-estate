@@ -28,7 +28,8 @@ class App extends Component {
       Swimming_Pool: false,
       filteredData: listingsData,
       populateFormsData: '',
-      sort_by: 'price-dsc'
+      sort_by: 'price-dsc',
+      view: 'box'
     }
 
     this.change = this.change.bind(this)
@@ -184,7 +185,7 @@ class App extends Component {
       <Header />
     <section id="content-area">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
-      <Listings listingsData={this.state.filteredData} change={this.change}/>
+      <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} />
       </section>
       </div>)
   }
