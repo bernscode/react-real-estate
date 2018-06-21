@@ -19,5 +19,49 @@ row:after {
 }
 
 @media #{$breakpoint-small} {
-  
+  .container {
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      width: 100% / $grid-colums * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-medium} {
+  .container {
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      width: 100% / $grid-colums * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-large} {
+  .container {
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      width: 100% / $grid-colums * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-xl} {
+  .container {
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      width: 100% / $grid-colums * $i;
+    }
+  }
 }
