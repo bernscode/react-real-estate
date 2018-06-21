@@ -11,7 +11,7 @@ export default class Listings extends Component {
   }
 
 
-  loopListings () {
+  loopListings() {
 
     // alternate syntax for declaring variable
     // var data = this.props.listingsData
@@ -27,57 +27,110 @@ export default class Listings extends Component {
 
     // passing the index for each child in the array
     return listingsData.map((listing, index) => {
-      // created a key for each child in the array
-      return (<div className="col-md-3-listing" key={index}>
-        <div className="listing">
-          <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
-            <span className="address">{listing.address}</span>
-            <div className="details">
-              <div className="col-md-3">
-                <div className="user-img">
-                </div>
-              </div>
-              <div className="col-md-9">
-                <div className="user-details">
-                  <span className="user-name">
-                    Hector Bernal
-                  </span>
-                  <span className="post-date">
-                    06/12/2018
-                  </span>
-                </div>
-                <div className="listing-details">
-                  <div className="squareFeet">
-                    <i className="fa fa-square-o" aria-hidden="true"></i>
-                  <span>{listing.squareFeet} ft&sup2;</span>
-                  </div>
-                  <div className="bedrooms">
-                    <i className="fa fa-bed" aria-hidden="true"></i>
-                  <span>{listing.bedroom} Bedrooms</span>
+      // box view
+      if(this.props.globalState.view == 'box') {
+
+          return (<div className="col-md-3-listing" key={index}>
+          <div className="listing">
+            <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
+              <span className="address">{listing.address}</span>
+              <div className="details">
+                <div className="col-md-3">
+                  <div className="user-img">
                   </div>
                 </div>
-
-                <div className="view-btn">
-                  View Listing
+                <div className="col-md-9">
+                  <div className="user-details">
+                    <span className="user-name">
+                      Hector Bernal
+                    </span>
+                    <span className="post-date">
+                      06/12/2018
+                    </span>
+                  </div>
+                  <div className="listing-details">
+                    <div className="squareFeet">
+                      <i className="fa fa-square-o" aria-hidden="true"></i>
+                    <span>{listing.squareFeet} ft&sup2;</span>
+                    </div>
+                    <div className="bedrooms">
+                      <i className="fa fa-bed" aria-hidden="true"></i>
+                    <span>{listing.bedroom} Bedrooms</span>
+                    </div>
+                  </div>
+                  <div className="view-btn">
+                    View Listing
+                  </div>
                 </div>
-
               </div>
-
+            </div>
+            <div className="bottom-info">
+              <span className="price">
+                ${listing.price}
+              </span>
+              <span className="location">
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {listing.city}, {listing.state}
+              </span>
             </div>
           </div>
-          <div className="bottom-info">
-            <span className="price">
-              ${listing.price}
-            </span>
-            <span className="location">
-              <i className="fa fa-map-marker" aria-hidden="true"></i>
-            {listing.city}, {listing.state}
-            </span>
+        </div>)
+      } else {
+
+        // created a key for each child in the array
+        return (<div className="col-md-3-listing" key={index}>
+          <div className="listing">
+            <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
+              <span className="address">{listing.address}</span>
+              <div className="details">
+                <div className="col-md-3">
+                  <div className="user-img">
+                  </div>
+                </div>
+                <div className="col-md-9">
+                  <div className="user-details">
+                    <span className="user-name">
+                      Hector Bernal
+                    </span>
+                    <span className="post-date">
+                      06/12/2018
+                    </span>
+                  </div>
+                  <div className="listing-details">
+                    <div className="squareFeet">
+                      <i className="fa fa-square-o" aria-hidden="true"></i>
+                    <span>{listing.squareFeet} ft&sup2;</span>
+                    </div>
+                    <div className="bedrooms">
+                      <i className="fa fa-bed" aria-hidden="true"></i>
+                    <span>{listing.bedroom} Bedrooms</span>
+                    </div>
+                  </div>
+
+                  <div className="view-btn">
+                    View Listing
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div className="bottom-info">
+              <span className="price">
+                ${listing.price}
+              </span>
+              <span className="location">
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+              {listing.city}, {listing.state}
+              </span>
+            </div>
           </div>
-        </div>
-      </div>)
-    })
-  }
+        </div>)
+      } // end of view
+
+    }) // end of listingsData.map
+  } // end of loopListings()
+
   render () {
     return (<section id="listings">
       <section className="search-area">
