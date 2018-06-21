@@ -79,7 +79,7 @@ export default class Listings extends Component {
       } else {
         // THIS IS THE Long VIEW
         // created a key for each child in the array
-        return (<div className="col-md-3-listing" key={index}>
+        return (<div className="col-md-12-listing col-lg-6" key={index}>
           <div className="listing">
             <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
               <span className="address">{listing.address}</span>

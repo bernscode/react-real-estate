@@ -893,7 +893,7 @@ var Listings = function (_Component) {
           // created a key for each child in the array
           return _react2.default.createElement(
             'div',
-            { className: 'col-md-3-listing', key: index },
+            { className: 'col-md-12-listing col-lg-6', key: index },
             _react2.default.createElement(
               'div',
               { className: 'listing' },
