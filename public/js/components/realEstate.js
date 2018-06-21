@@ -200,7 +200,7 @@ var App = function (_Component) {
       filteredData: _listingsData2.default,
       populateFormsData: '',
       sort_by: 'price-dsc',
-      view: 'box'
+      view: 'long'
     };
 
     _this.change = _this.change.bind(_this);
@@ -791,9 +791,10 @@ var Listings = function (_Component) {
 
       // passing the index for each child in the array
       return listingsData.map(function (listing, index) {
-        // box view
+        // box view if statement
         if (_this2.props.globalState.view == 'box') {
 
+          // THIS IS THE Box VIEW
           return _react2.default.createElement(
             'div',
             { className: 'col-md-3-listing', key: index },
@@ -888,7 +889,7 @@ var Listings = function (_Component) {
             )
           );
         } else {
-
+          // THIS IS THE Long VIEW
           // created a key for each child in the array
           return _react2.default.createElement(
             'div',
