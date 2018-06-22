@@ -35,6 +35,8 @@ class App extends Component {
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
+    this.changeView = this.changeView.bind(this)
+
   }
 
 
@@ -68,6 +70,13 @@ class App extends Component {
     // console.log(event.target.value)
   }
 
+
+
+  changeView(viewName) {
+    this.setState({
+      view: viewName
+    })
+  }
 
 
   // method for filtering data
@@ -185,7 +194,7 @@ class App extends Component {
       <Header />
     <section id="content-area">
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
-      <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} />
+      <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
       </section>
       </div>)
   }

@@ -206,6 +206,8 @@ var App = function (_Component) {
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
+    _this.changeView = _this.changeView.bind(_this);
+
     return _this;
   }
 
@@ -242,6 +244,13 @@ var App = function (_Component) {
       });
       // test for target value
       // console.log(event.target.value)
+    }
+  }, {
+    key: 'changeView',
+    value: function changeView(viewName) {
+      this.setState({
+        view: viewName
+      });
     }
 
     // method for filtering data
@@ -361,7 +370,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForms }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, change: this.change, globalState: this.state })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, change: this.change, globalState: this.state, changeView: this.changeView })
         )
       );
     }
@@ -1027,8 +1036,8 @@ var Listings = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'view' },
-              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true' }),
-              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true' })
+              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "long") }),
+              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true', onClick: this.props.changeView.bind(null, "box") })
             )
           )
         ),
