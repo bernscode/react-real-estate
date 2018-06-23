@@ -261,6 +261,7 @@
 
         font-weight: 100;
         padding: 30px;
+        // padding: 10px 20px 40px 20px;
         position: absolute;
         top: 0;
         left: 0;
@@ -354,6 +355,7 @@
           text-align: center;
           width: 75%;
           max-height: 150px;
+
 
           transition: color .4s ease-in-out, background-color .3s ease-in-out, font-weight .2s ease-in-out;
           &:hover {
@@ -449,8 +451,6 @@
 
 
 
-
-
 // USED BEFORE _grid.scss WAS ADDED
 
 // .col-md-3 {
@@ -486,7 +486,6 @@
 //   padding: 0 15px;
 //
 // }
-
 
 
 

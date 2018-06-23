@@ -147,7 +147,7 @@ export default class Listings extends Component {
           </select>
           <div className="view">
             <i className="fa fa-th-list" aria-hidden="true" onClick={this.props.changeView.bind(null, "long")}></i>
-          <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, "box")}></i>
+            <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, "box")}></i>
           </div>
         </div>
       </section>
