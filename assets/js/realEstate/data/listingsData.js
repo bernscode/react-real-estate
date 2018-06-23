@@ -9,11 +9,15 @@ var listingsData = [
     price: 850000,
     squareFeet: 3115,
     lotSize: 4312,
-    features: [
-      'Garage',
-      'Swimming Pool',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool',
+    //   'Fireplace'
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_1.jpg'
 
   },
@@ -27,10 +31,14 @@ var listingsData = [
     price: 720000,
     squareFeet: 2785,
     lotSize: 4115,
-    features: [
-      'Garage',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Fireplace',
+    // ],
+    Garage: true,
+    Swimming_Pool: false,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_2.jpg'
   },
   {
@@ -43,10 +51,14 @@ var listingsData = [
     price: 785000,
     squareFeet: 2825,
     lotSize: 3824,
-    features: [
-      'Garage',
-      'Swimming Pool'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool'
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: false,
+    Guest_House: false,
     image: './img/house_3.jpg'
   },
   {
@@ -59,11 +71,15 @@ var listingsData = [
     price: 885000,
     squareFeet: 3815,
     lotSize: 4798,
-    features: [
-      'Garage',
-      'Swimming Pool',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool',
+    //   'Fireplace'
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_4.jpg'
   },
   {
@@ -76,10 +92,14 @@ var listingsData = [
     price: 620000,
     squareFeet: 2815,
     lotSize: 4035,
-    features: [
-      'Garage',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Fireplace'
+    // ],
+    Garage: true,
+    Swimming_Pool: false,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_5.jpg'
   },
   {
@@ -92,12 +112,16 @@ var listingsData = [
     price: 970000,
     squareFeet: 4316,
     lotSize: 6295,
-    features: [
-      'Garage',
-      'Swimming Pool',
-      'Fireplace',
-      'Guest House'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool',
+    //   'Fireplace',
+    //   'Guest House'
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: true,
+    Guest_House: true,
     image: './img/house_6.jpg'
   },
   {
@@ -110,10 +134,15 @@ var listingsData = [
     price: 690000,
     squareFeet: 3305,
     lotSize: 4485,
-    features: [
-      'Garage',
-      'Swimming Pool'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool',
+    //   'Fireplace',
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_7.jpg'
   },
   {
@@ -126,11 +155,14 @@ var listingsData = [
     price: 590000,
     squareFeet: 3214,
     lotSize: 4572,
-    features: [
-      'Garage',
-      'Swimming Pool',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Fireplace'
+    // ],
+    Garage: true,
+    Swimming_Pool: false,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_8.jpg'
   },
   {
@@ -143,11 +175,15 @@ var listingsData = [
     price: 770000,
     squareFeet: 3475,
     lotSize: 4622,
-    features: [
-      'Garage',
-      'Swimming Pool',
-      'Fireplace'
-    ],
+    // features: [
+    //   'Garage',
+    //   'Swimming Pool',
+    //   'Fireplace'
+    // ],
+    Garage: true,
+    Swimming_Pool: true,
+    Fireplace: true,
+    Guest_House: false,
     image: './img/house_9.jpg'
   }
 ]

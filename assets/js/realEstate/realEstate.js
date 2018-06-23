@@ -92,6 +92,7 @@ class App extends Component {
       item.lotSize <= this.state.max_lotSize &&
       item.bedroom >= this.state.bedroom &&
       item.bathroom >= this.state.bathroom
+
     })
 
     if(this.state.city != "all") {
@@ -133,17 +134,63 @@ class App extends Component {
     }
 
 
+    // if(this.state.city != "all") {
+    //   newData = newData.filter((item) => {
+    //     return item.city == this.state.city
+    //   })
+    // }
+
+    // checkbox filter
+
+    // if(this.state.Garage == true) {
+    //   // console.log(item.features.Garage)
+    //   newData = newData.filter((item) => {
+    //
+    //     var propsWithGarage[];
+    //
+    //     for (var i in item.features) {
+    //
+    //       if(item.features[i] == "Garage"){
+    //         propsWithGarage[] = this.item
+    //       }
+    //         propsWithGarage = item.features[i]
+    //         console.log(item.features[i])
+    //
+    //     }
+    //     return item.features[i] == "Garage"
+    //
+    //   })
+    // }
+
+    if(this.state.Garage == true) {
+      newData = newData.filter((item) => {
+        return item.Garage == true
+      })
+    }
+
+    if(this.state.Swimming_Pool == true) {
+      newData = newData.filter((item) => {
+        return item.Swimming_Pool == true
+      })
+    }
+
+    if(this.state.Fireplace == true) {
+      newData = newData.filter((item) => {
+        return item.Fireplace == true
+      })
+    }
+
+    if(this.state.Guest_House == true) {
+      newData = newData.filter((item) => {
+        return item.Guest_House == true
+      })
+    }
+
     this.setState({
       filteredData: newData
     })
   }
 
-  // method to validate user input
-  // checkInputLimits() {
-  //   if(this.state.min_price < 0) {
-  //     alert("Please enter a value greater than 0")
-  //   }
-  // }
 
 
   populateForms() {

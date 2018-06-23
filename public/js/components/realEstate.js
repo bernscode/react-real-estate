@@ -19,7 +19,15 @@ var listingsData = [{
   price: 850000,
   squareFeet: 3115,
   lotSize: 4312,
-  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool',
+  //   'Fireplace'
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_1.jpg'
 
 }, {
@@ -32,7 +40,14 @@ var listingsData = [{
   price: 720000,
   squareFeet: 2785,
   lotSize: 4115,
-  features: ['Garage', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Fireplace',
+  // ],
+  Garage: true,
+  Swimming_Pool: false,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_2.jpg'
 }, {
   homeType: 'Townhomes',
@@ -44,7 +59,14 @@ var listingsData = [{
   price: 785000,
   squareFeet: 2825,
   lotSize: 3824,
-  features: ['Garage', 'Swimming Pool'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool'
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: false,
+  Guest_House: false,
   image: './img/house_3.jpg'
 }, {
   homeType: 'Houses',
@@ -56,7 +78,15 @@ var listingsData = [{
   price: 885000,
   squareFeet: 3815,
   lotSize: 4798,
-  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool',
+  //   'Fireplace'
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_4.jpg'
 }, {
   homeType: 'Condos',
@@ -68,7 +98,14 @@ var listingsData = [{
   price: 620000,
   squareFeet: 2815,
   lotSize: 4035,
-  features: ['Garage', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Fireplace'
+  // ],
+  Garage: true,
+  Swimming_Pool: false,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_5.jpg'
 }, {
   homeType: 'Houses',
@@ -80,7 +117,16 @@ var listingsData = [{
   price: 970000,
   squareFeet: 4316,
   lotSize: 6295,
-  features: ['Garage', 'Swimming Pool', 'Fireplace', 'Guest House'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool',
+  //   'Fireplace',
+  //   'Guest House'
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: true,
+  Guest_House: true,
   image: './img/house_6.jpg'
 }, {
   homeType: 'Townhomes',
@@ -92,7 +138,15 @@ var listingsData = [{
   price: 690000,
   squareFeet: 3305,
   lotSize: 4485,
-  features: ['Garage', 'Swimming Pool'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool',
+  //   'Fireplace',
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_7.jpg'
 }, {
   homeType: 'Houses',
@@ -104,7 +158,14 @@ var listingsData = [{
   price: 590000,
   squareFeet: 3214,
   lotSize: 4572,
-  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Fireplace'
+  // ],
+  Garage: true,
+  Swimming_Pool: false,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_8.jpg'
 }, {
   homeType: 'Condos',
@@ -116,7 +177,15 @@ var listingsData = [{
   price: 770000,
   squareFeet: 3475,
   lotSize: 4622,
-  features: ['Garage', 'Swimming Pool', 'Fireplace'],
+  // features: [
+  //   'Garage',
+  //   'Swimming Pool',
+  //   'Fireplace'
+  // ],
+  Garage: true,
+  Swimming_Pool: true,
+  Fireplace: true,
+  Guest_House: false,
   image: './img/house_9.jpg'
 }];
 
@@ -303,19 +372,62 @@ var App = function (_Component) {
         });
       }
 
+      // if(this.state.city != "all") {
+      //   newData = newData.filter((item) => {
+      //     return item.city == this.state.city
+      //   })
+      // }
+
+      // checkbox filter
+
+      // if(this.state.Garage == true) {
+      //   // console.log(item.features.Garage)
+      //   newData = newData.filter((item) => {
+      //
+      //     var propsWithGarage[];
+      //
+      //     for (var i in item.features) {
+      //
+      //       if(item.features[i] == "Garage"){
+      //         propsWithGarage[] = this.item
+      //       }
+      //         propsWithGarage = item.features[i]
+      //         console.log(item.features[i])
+      //
+      //     }
+      //     return item.features[i] == "Garage"
+      //
+      //   })
+      // }
+
+      if (this.state.Garage == true) {
+        newData = newData.filter(function (item) {
+          return item.Garage == true;
+        });
+      }
+
+      if (this.state.Swimming_Pool == true) {
+        newData = newData.filter(function (item) {
+          return item.Swimming_Pool == true;
+        });
+      }
+
+      if (this.state.Fireplace == true) {
+        newData = newData.filter(function (item) {
+          return item.Fireplace == true;
+        });
+      }
+
+      if (this.state.Guest_House == true) {
+        newData = newData.filter(function (item) {
+          return item.Guest_House == true;
+        });
+      }
+
       this.setState({
         filteredData: newData
       });
     }
-
-    // method to validate user input
-    // checkInputLimits() {
-    //   if(this.state.min_price < 0) {
-    //     alert("Please enter a value greater than 0")
-    //   }
-    // }
-
-
   }, {
     key: 'populateForms',
     value: function populateForms() {
