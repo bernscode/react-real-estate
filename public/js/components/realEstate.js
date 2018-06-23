@@ -1140,7 +1140,8 @@ var Listings = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'results' },
-            '390 results found'
+            this.props.globalState.filteredData.length,
+            ' results found'
           ),
           _react2.default.createElement(
             'div',
