@@ -195,6 +195,8 @@
 
   .listings-results {
     margin-bottom: 60px;
+    display: block;
+    width: 100%;
 
     .listing {
       background: white;
@@ -407,6 +409,8 @@
 
 
 #pagination {
+  display: block;
+  width: 100%;
   text-align: center;
 
   .pages{
