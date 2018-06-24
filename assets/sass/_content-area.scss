@@ -195,8 +195,6 @@
 
   .listings-results {
     margin-bottom: 60px;
-    display: block;
-    width: 100%;
 
     .listing {
       background: white;
@@ -263,7 +261,7 @@
         opacity: 0;
 
         font-weight: 100;
-        padding: 30px;
+        padding: 15px 30px;
         // padding: 10px 20px 40px 20px;
         position: absolute;
         top: 0;
@@ -446,8 +444,6 @@
     }
   }
 }
-
-
 
 
 
