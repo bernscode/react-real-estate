@@ -24,6 +24,8 @@
 
   padding-top: 6%;
 
+  overflow: scroll;
+
 
   .inside {
     // padding: 30px 25px 30px 45px;
@@ -51,6 +53,8 @@
   }
 
   .filters {
+    height: auto;
+    padding: 2px;
     .title {
       font-size: 13.5px;
       font-weight: 400;
@@ -62,7 +66,7 @@
     input[type="number"] {
       border-radius: 5px;
       font-size: 14px;
-      padding: 5px;
+      padding: 2px;
       width: 45%;
       display: inline-block;
       margin-right: 2.5%;
@@ -212,11 +216,14 @@
       color: white;
       padding: 15px;
       position: relative;
-      background: url("https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&h=350") no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+
+      // This image and style is populated in JSX - Listings.js
+      // background: url("https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&h=350") no-repeat center center;
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      // background-size: cover;
+
 
       min-height: 200px;
       // width: 100%;
@@ -261,7 +268,7 @@
         opacity: 0;
 
         font-weight: 100;
-        padding: 15px 30px;
+        padding: 15px 15px;
         // padding: 10px 20px 40px 20px;
         position: absolute;
         top: 0;
@@ -447,6 +454,93 @@
 
 
 
+
+
+
+
+
+@media (max-width: 1300px) {
+
+	// rules here apply to devices from 901px to 1200px (inclusive)
+
+  #filter {
+    position: absolute;
+    left: -20%;
+  }
+
+  #listings {
+    left: 0%;
+    width: 100%;
+  }
+
+  .topNavBtn {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 1000px) {	
+
+	// rules here apply to devices from 601px to 900px (inclusive)
+
+  .agent-img {
+    display: none;
+  }
+  .details-box {
+    width: 100%;
+  }
+  #listings .listings-results .listing-img .details .listing-details  {
+    margin-bottom: 25px;
+  }
+  #listings .listings-results .listing-img .details .user-details {
+    display: none;
+  }
+  #listings .listings-results .listing-img .address {
+    font-size: 16px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+
+	// rules here apply to devices from 0px to 600px (inclusive)
+  .agent-img {
+    display: inline-block;
+    padding: 5px 1em 0 1em;
+  }
+  .details-box {
+    width: 75%;
+    padding-top: 5px;
+  }
+  // #listings .listings-results .listing-img .details .user-details {
+  //   display: inline-block;
+  // }
+  #listings .listings-results .listing-img .details .listing-details  {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  #listings .listings-results .listing-img .details .view-btn {
+    width: 90%;
+  }
+  
+}
+
+
+
+@media (max-width: 470px) {
+
+	// rules here apply to devices from 0px to 470px (inclusive)
+
+  #listings .listings-results .listing-img .details .user-details {
+    display: none;
+  }
+  .details-box {
+    width: 90%;
+  }
+  
+}
 
 
 

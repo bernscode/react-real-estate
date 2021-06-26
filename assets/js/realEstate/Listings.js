@@ -33,14 +33,14 @@ export default class Listings extends Component {
           // THIS IS THE Box VIEW
           return (<div className="col-md-3-listing col-md-4" key={index}>
           <div className="listing">
-            <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
+            <div className="listing-img" style={{background: `url("${listing.image}") center center / cover no-repeat`}}>
               <span className="address">{listing.address}</span>
               <div className="details">
-                <div className="col-md-3">
+                <div className="col-md-3 agent-img">
                   <div className="user-img">
                   </div>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-9 details-box">
                   <div className="user-details">
                     <span className="user-name">
                       Hector Bernal
@@ -81,7 +81,7 @@ export default class Listings extends Component {
         // created a key for each child in the array
         return (<div className="col-md-12-listing col-lg-6" key={index}>
           <div className="listing">
-            <div className="listing-img" style={{background: `url("${listing.image}") center center no-repeat`}}>
+            <div className="listing-img" style={{background: `url("${listing.image}") center center / cover no-repeat`}}>
               <span className="address">{listing.address}</span>
               <div className="details">
                 <div className="col-md-3">
