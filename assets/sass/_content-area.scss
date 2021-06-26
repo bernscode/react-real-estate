@@ -500,7 +500,6 @@
     font-size: 16px;
   }
 
-
 }
 
 @media (max-width: 768px) {
@@ -522,7 +521,7 @@
     width: 100%;
   }
   #listings .listings-results .listing-img .details .view-btn {
-    width: 90%;
+    width: 50%;
   }
   
 }
@@ -537,6 +536,9 @@
     display: none;
   }
   .details-box {
+    width: 90%;
+  }
+  #listings .listings-results .listing-img .details .view-btn {
     width: 90%;
   }
   
