@@ -50,7 +50,7 @@ header {
       &:hover {
         color: $gold;
       }
-      &.register-btn {
+      &.header-btn {
         background: $lightBrown;
         padding: 7px 27px;
         text-align: center;
@@ -64,7 +64,90 @@ header {
           color: $darkBrown;
           
         }
+
+        &.filters-btn {
+          display: none;
+        }
       }
     }
+    .nav-btn {
+      position: absolute;
+      top: 38px;
+      right: 35px;
+      height: 16px;
+      width: 19px;
+      font-size: 22px;
+      z-index: 999999999;
+      transition: all 0.6s ease;
+      display: none;
+      .nav-line {
+        background-color: #FFF;
+        height: 3px;
+        width: 100%;
+        &.top-line {
+          margin-top: 0;
+        }
+        &.middle-line {
+          margin-top: 2px;
+          width: 80%;
+          margin-left: 20%;
+          opacity: 1;
+          transition: all 0.6s ease-in-out;
+        }
+        &.middle-line.active {
+          opacity: 0;
+        }
+        &.bottom-line {
+          position: relative;
+          margin-top: 2px;
+        }
+      }
+    }
+    .nav-btn.active {
+      top: 34px;
+    }
   }
+}
+
+
+
+
+@media (max-width: 1300px) {
+
+	// rules here apply to devices from 901px to 1200px (inclusive)
+  header nav a.header-btn.filters-btn {
+    display: block;
+  }
+
+  header nav .nav-btn {
+    display: block;
+  }
+
+
+}
+
+
+@media (max-width: 1000px) {	
+
+	// rules here apply to devices from 601px to 900px (inclusive)
+
+
+
+}
+
+@media (max-width: 768px) {
+
+	// rules here apply to devices from 0px to 600px (inclusive)
+
+  
+}
+
+
+
+@media (max-width: 470px) {
+
+	// rules here apply to devices from 0px to 470px (inclusive)
+
+
+  
 }

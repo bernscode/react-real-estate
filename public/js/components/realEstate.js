@@ -343,8 +343,15 @@ var Header = function (_Component) {
           ),
           _react2.default.createElement(
             'a',
-            { href: '#', className: 'register-btn' },
+            { href: '#', className: 'header-btn topNavBtn' },
             'Register'
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'navBtn', className: 'nav-btn' },
+            _react2.default.createElement('div', { className: 'nav-line top-line' }),
+            _react2.default.createElement('div', { id: 'middleLine', className: 'nav-line middle-line' }),
+            _react2.default.createElement('div', { className: 'nav-line bottom-line' })
           )
         )
       );
